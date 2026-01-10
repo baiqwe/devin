@@ -67,18 +67,16 @@ export function generateMetaDescription(
 
 /**
  * 生成优化的 Title Tag
- * 如果标题包含 'Codes'，自动添加 'Latest Codes & Rewards'
+ * 注意：移除了强制截断，保留完整关键词供搜索引擎索引
+ * Google 会自行决定在 SERP 中如何截断显示
  */
 export function generateTitle(title: string): string {
   const baseTitle = title.includes('Codes')
     ? `${title} - Latest Codes & Rewards`
     : title
 
-  // 确保标题不超过 60 个字符（SEO 最佳实践）
-  if (baseTitle.length > 60) {
-    return baseTitle.slice(0, 57) + '...'
-  }
-
+  // 不再强制截断标题
+  // Google 会抓取完整 title 用于关键词索引，即使在搜索结果中被截断显示
   return baseTitle
 }
 
@@ -89,15 +87,16 @@ export function generateMetadata(options: SEOOptions): Metadata {
   const title = generateTitle(options.title)
   const description = generateMetaDescription(options.description)
 
-  // 修复 canonical URL 逻辑：确保所有 URL 都是绝对路径
+  // 修复 canonical URL 逻辑：
+  // 1. 如果提供了 canonicalUrl，确保是绝对路径
+  // 2. 如果没有提供，不设置默认值（避免内页错误指向首页）
   let canonicalUrl = options.canonicalUrl || ''
   if (canonicalUrl && !canonicalUrl.startsWith('http')) {
     // 确保路径以 / 开头
     if (!canonicalUrl.startsWith('/')) canonicalUrl = `/${canonicalUrl}`
     canonicalUrl = `${siteConfig.url}${canonicalUrl}`
-  } else if (!canonicalUrl) {
-    canonicalUrl = siteConfig.url
   }
+  // 注意：如果没有提供 canonicalUrl，保持为空字符串，不默认指向首页
 
   const ogImage = options.image || siteConfig.ogImage
 

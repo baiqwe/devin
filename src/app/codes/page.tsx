@@ -78,20 +78,11 @@ export default function CodesPage() {
       />
 
       {/* SEO Head Component with Schema */}
+      {/* 注意：只使用 schema 属性传入 FAQ，避免与 faq 属性重复 */}
       <SEOHead
         breadcrumbs={[
           { name: 'Home', url: '/' },
           { name: 'Codes', url: '/codes' },
-        ]}
-        faq={[
-          {
-            question: 'How do I redeem codes in The Forge?',
-            answer: 'Open The Forge in Roblox, click the Gear icon (Settings) at the top-left, scroll down to the "Codes" section, enter the code and click Claim.',
-          },
-          {
-            question: 'What are the latest active codes for The Forge?',
-            answer: `Currently, there are ${activeCodes.length} active codes available, including rewards like Free Rerolls and Gems. Check our updated list for details.`,
-          },
         ]}
         schema={jsonLd}
       />
