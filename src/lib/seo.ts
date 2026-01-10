@@ -104,9 +104,10 @@ export function generateMetadata(options: SEOOptions): Metadata {
     title,
     description,
     keywords: options.keywords || [
-      'The Forge Roblox',
-      'The Forge Wiki',
+      'Devil Hunter Roblox',
+      'Devil Hunter Wiki',
       'Roblox RPG',
+      'Devil Hunter Codes',
     ],
     authors: options.author ? [{ name: options.author }] : undefined,
     openGraph: {
@@ -192,7 +193,7 @@ export function generateArticleSchema(options: {
     dateModified: options.modifiedTime || options.publishedTime,
     author: {
       '@type': 'Organization',
-      name: options.author || 'The Forge Wiki',
+      name: options.author || 'Devil Hunter Wiki',
     },
     publisher: {
       '@type': 'Organization',
@@ -208,11 +209,11 @@ export function generateArticleSchema(options: {
     },
     about: {
       '@type': 'VideoGame',
-      name: 'The Forge',
+      name: 'Devil Hunter',
       gamePlatform: 'Roblox',
       publisher: {
         '@type': 'Organization',
-        name: 'Fireatacck',
+        name: 'Game Developers',
       },
     },
   }
@@ -235,7 +236,7 @@ export function generateVideoGameSchema(options: {
     url: `${siteConfig.url}${options.url}`,
     publisher: {
       '@type': 'Organization',
-      name: 'Fireatacck',
+      name: 'Game Developers',
     },
   }
 }

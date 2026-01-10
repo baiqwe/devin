@@ -15,7 +15,7 @@ export default function NotFound() {
         <p className="text-gray-600 mb-8 text-lg">
           The page you&apos;re looking for doesn&apos;t exist in our database.
         </p>
-        
+
         {/* 搜索栏 */}
         <div className="max-w-md mx-auto mb-8">
           <h3 className="text-lg font-semibold mb-4 text-gray-800">Search for what you need:</h3>
@@ -81,24 +81,24 @@ export default function NotFound() {
         </div>
       </div>
 
-      {/* 快速链接 */}
+      {/* Quick Links */}
       <div className="mt-8 text-center">
-        <h3 className="text-lg font-semibold mb-4 text-gray-800">Quick Links</h3>
+        <h3 className="text-lg font-semibold mb-4 text-gray-800 dark:text-gray-200">Looking for these?</h3>
         <div className="flex flex-wrap justify-center gap-4">
-          <a href="/codes" className="text-amber-600 hover:text-amber-700 font-medium">
+          <a href="/codes" className="text-red-600 dark:text-red-400 hover:text-red-700 dark:hover:text-red-300 font-medium">
             Codes
           </a>
-          <a href="/wiki/races" className="text-amber-600 hover:text-amber-700 font-medium">
-            Race Tier List
+          <a href="/wiki/tier-list" className="text-red-600 dark:text-red-400 hover:text-red-700 dark:hover:text-red-300 font-medium">
+            Tier List (Meta)
           </a>
-          <a href="/wiki/forging" className="text-amber-600 hover:text-amber-700 font-medium">
-            Forging Guide
+          <a href="/wiki/contracts" className="text-red-600 dark:text-red-400 hover:text-red-700 dark:hover:text-red-300 font-medium">
+            Contracts
           </a>
-          <a href="/quests" className="text-amber-600 hover:text-amber-700 font-medium">
-            Quests
+          <a href="/wiki/fiends" className="text-red-600 dark:text-red-400 hover:text-red-700 dark:hover:text-red-300 font-medium">
+            Fiends
           </a>
-          <a href="/items" className="text-amber-600 hover:text-amber-700 font-medium">
-            Items
+          <a href="/wiki/items" className="text-red-600 dark:text-red-400 hover:text-red-700 dark:hover:text-red-300 font-medium">
+            Items (Surgery Kit)
           </a>
         </div>
       </div>

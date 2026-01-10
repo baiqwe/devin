@@ -31,15 +31,15 @@
         "language": "语言"
     },
     "footer": {
-        "description": "最全面的 The Forge Roblox 维基和代码 - 完整的种族、等级列表、代码指南等!",
+        "description": "最全面的 Devil Hunter Roblox 维基和代码 - 完整的契约、等级列表、代码指南等!",
         "quickLinks": "快速链接",
         "resources": "资源",
         "legal": "法律",
         "followUs": "关注我们",
-        "copyright": "© 2024 The Forge Wiki. 保留所有权利。与 Fireatacck 或 Roblox Corporation 无关。"
+        "copyright": "© 2026 Devil Hunter Wiki. 保留所有权利。与 Developer 或 Roblox Corporation 无关。"
     },
     "seo": {
-        "defaultTitle": "The Forge Wiki - 完整的 Roblox 游戏指南",
-        "defaultDescription": "最全面的 The Forge Roblox 维基和代码 - 完整的种族、等级列表、代码指南等!"
+        "defaultTitle": "Devil Hunter Wiki - 完整的 Roblox 游戏指南 & 代码",
+        "defaultDescription": "最全面的 Devil Hunter Roblox 维基 - 完整的契约、氏族、Tier List、Surgery Kit 指南等!"
     }
 }

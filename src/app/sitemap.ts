@@ -92,14 +92,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
-  // Blog Posts - Temporarily disabled due to build error
-  // const blogPosts = getAllBlogPosts()
-  // const blogPages: MetadataRoute.Sitemap = blogPosts.map((post: BlogPost) => ({
-  //   url: `${baseUrl}/blog/${post.slug}`,
-  //   lastModified: new Date(post.publishedAt).toISOString(),
-  //   changeFrequency: 'monthly' as const,
-  //   priority: 0.8,
-  // }))
+  // Blog Posts
+  const blogPosts = getAllBlogPosts()
+  const blogPages: MetadataRoute.Sitemap = blogPosts.map((post: BlogPost) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.publishedAt).toISOString(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }))
 
-  return [...staticPages]
+  return [...staticPages, ...blogPages]
+
+
 }
