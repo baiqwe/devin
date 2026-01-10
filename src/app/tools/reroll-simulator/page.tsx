@@ -6,70 +6,71 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Dice6, RotateCcw } from "lucide-react"
 import Link from "next/link"
-import racesData from "@/data/races.json"
+import fiendsData from "@/data/fiends.json"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import SEOHead from "@/components/SEOHead"
 
-// Race probabilities (adjusted based on actual game data)
-const raceProbabilities = {
-  S: 0.02, // 2% for S tier
-  A: 0.15, // 15% for A tier
-  B: 0.50, // 50% for B tier
-  D: 0.33, // 33% for D tier (Common/Human)
+// Fiend probabilities (based on game data)
+const fiendProbabilities = {
+  "S+": 0.001, // 0.1% for S+ tier (Chainsaw)
+  S: 0.01, // 1% for S tier
+  A: 0.05, // 5% for A tier
+  B: 0.15, // 15% for B tier
+  C: 0.789, // Rest for C tier
 }
 
-function getRandomRace() {
+function getRandomFiend() {
   const random = Math.random()
   let cumulative = 0
 
-  for (const [tier, probability] of Object.entries(raceProbabilities)) {
+  for (const [tier, probability] of Object.entries(fiendProbabilities)) {
     cumulative += probability
     if (random <= cumulative) {
-      const tierRaces = racesData.filter((race) => race.tier === tier)
-      if (tierRaces.length > 0) {
-        return tierRaces[Math.floor(Math.random() * tierRaces.length)]
+      const tierFiends = fiendsData.filter((fiend) => fiend.tier === tier)
+      if (tierFiends.length > 0) {
+        return tierFiends[Math.floor(Math.random() * tierFiends.length)]
       }
     }
   }
 
-  // Fallback to D tier (Human) or first available race
-  const dTierRaces = racesData.filter((race) => race.tier === "D")
-  if (dTierRaces.length > 0) {
-    return dTierRaces[0]
+  // Fallback to C tier
+  const cTierFiends = fiendsData.filter((fiend) => fiend.tier === "C")
+  if (cTierFiends.length > 0) {
+    return cTierFiends[0]
   }
-  
-  // Final fallback - return first race if everything else fails
-  return racesData[0] || null
+
+  // Final fallback
+  return fiendsData[0] || null
 }
 
 export default function RerollSimulatorPage() {
-  const [currentRace, setCurrentRace] = useState<typeof racesData[0] | null>(
+  const [currentFiend, setCurrentFiend] = useState<typeof fiendsData[0] | null>(
     null
   )
-  const [rollHistory, setRollHistory] = useState<typeof racesData[0][]>([])
+  const [rollHistory, setRollHistory] = useState<typeof fiendsData[0][]>([])
   const [rollCount, setRollCount] = useState(0)
 
   const handleRoll = () => {
-    const newRace = getRandomRace()
-    if (newRace) {
-      setCurrentRace(newRace)
-      setRollHistory((prev) => [newRace, ...prev].slice(0, 10)) // Keep last 10
+    const newFiend = getRandomFiend()
+    if (newFiend) {
+      setCurrentFiend(newFiend)
+      setRollHistory((prev) => [newFiend, ...prev].slice(0, 10)) // Keep last 10
       setRollCount((prev) => prev + 1)
     }
   }
 
   const handleReset = () => {
-    setCurrentRace(null)
+    setCurrentFiend(null)
     setRollHistory([])
     setRollCount(0)
   }
 
-  const tierColors = {
-    S: "from-red-600 to-orange-600",
+  const tierColors: Record<string, string> = {
+    "S+": "from-orange-600 to-red-600",
+    S: "from-red-600 to-pink-600",
     A: "from-amber-600 to-yellow-600",
     B: "from-blue-600 to-cyan-600",
-    C: "from-green-600 to-emerald-600",
-    D: "from-gray-600 to-slate-600",
+    C: "from-gray-600 to-slate-600",
   }
 
   // Dynamic date for SEO
@@ -80,16 +81,16 @@ export default function RerollSimulatorPage() {
   // FAQ data for SEO
   const faqData = [
     {
-      question: 'How do I get free rerolls in The Forge?',
-      answer: 'You can get free rerolls by redeeming codes like "100K!", "40KLIKES", or "20KLIKES" from our codes page. You can also earn rerolls by completing daily quests and finding hidden chests in the Volcanic Depths.',
+      question: 'How do I get free Fiend Rerolls in Devil Hunter?',
+      answer: 'You can get free Fiend Rerolls by redeeming codes like "100KLIKES", "FPS", or "MELO150K" from our codes page. The tutorial also grants initial rerolls.',
     },
     {
-      question: 'What are the best races to reroll for in The Forge?',
-      answer: 'The best races are S-tier Legendary races like Angel and Demon, which have the highest stats. A-tier races like Dragonborn are also excellent for end-game content. Check our Race Tier List guide for complete rankings.',
+      question: 'What are the best Fiends to reroll for in Devil Hunter?',
+      answer: 'The best Fiend is Chainsaw Fiend (S+ tier, 0.1% drop rate) - extremely rare but incredibly powerful. A-tier Fiends like Shark Fiend and Violence Fiend are strong alternatives.',
     },
     {
-      question: 'What are the reroll probabilities in The Forge?',
-      answer: 'Based on community data, S-tier races have approximately 2% chance, A-tier 15%, B-tier 50%, and C-tier 33%. Use this simulator to understand your chances before spending reroll tokens.',
+      question: 'What are the Fiend reroll probabilities in Devil Hunter?',
+      answer: 'Based on community data: Chainsaw Fiend (S+) 0.1%, S-tier 1%, A-tier 5%, B-tier 15%, C-tier 78.9%. Use this simulator to understand your chances.',
     },
   ]
 
@@ -99,6 +100,7 @@ export default function RerollSimulatorPage() {
       <Breadcrumbs
         items={[
           { name: 'Home', url: '/' },
+          { name: 'Tools', url: '/tools' },
           { name: 'Reroll Simulator', url: '/tools/reroll-simulator' },
         ]}
       />
@@ -107,6 +109,7 @@ export default function RerollSimulatorPage() {
       <SEOHead
         breadcrumbs={[
           { name: 'Home', url: '/' },
+          { name: 'Tools', url: '/tools' },
           { name: 'Reroll Simulator', url: '/tools/reroll-simulator' },
         ]}
         faq={faqData}
@@ -114,14 +117,14 @@ export default function RerollSimulatorPage() {
 
       {/* SEO Intro Content */}
       <div className="mb-10 text-center">
-        <h1 className="text-4xl md:text-5xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-orange-600">
-          The Forge Race Reroll Simulator ({currentMonth} {currentYear})
+        <h1 className="text-4xl md:text-5xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-orange-600">
+          Devil Hunter Fiend Reroll Simulator ({currentMonth} {currentYear})
         </h1>
         <p className="text-gray-700 dark:text-gray-300 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-          Test your luck with our <strong>The Forge reroll simulator</strong>! Simulate rolling for races to see your chances of getting <span className="font-semibold text-amber-700 dark:text-amber-400">Legendary races</span> like <strong>Angel</strong> or <strong>Demon</strong> before spending your reroll tokens.
+          Test your luck with our <strong>Devil Hunter reroll simulator</strong>! Simulate rolling for Fiends to see your chances of getting <span className="font-semibold text-red-700 dark:text-red-400">Chainsaw Fiend</span> (0.1% drop rate) or other rare forms before spending your reroll tokens.
         </p>
         <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-          Updated: <span className="font-medium text-amber-600 dark:text-amber-400">{currentMonth} {new Date().getDate()}, {currentYear}</span>
+          Updated: <span className="font-medium text-red-600 dark:text-red-400">{currentMonth} {new Date().getDate()}, {currentYear}</span>
         </p>
       </div>
 
@@ -130,46 +133,45 @@ export default function RerollSimulatorPage() {
         <div className="lg:col-span-2 space-y-6">
           <Card>
             <CardHeader>
-              <CardTitle>Roll for a Race</CardTitle>
+              <CardTitle>Roll for a Fiend</CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="flex items-center justify-center">
                 <Button
                   onClick={handleRoll}
                   size="lg"
-                  className="text-lg px-8 py-6 bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700"
+                  className="text-lg px-8 py-6 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700"
                 >
                   <Dice6 className="mr-2 h-5 w-5" />
                   Roll Now
                 </Button>
               </div>
 
-              {currentRace && (
+              {currentFiend && (
                 <div className="text-center">
                   <div
-                    className={`bg-gradient-to-r ${
-                      tierColors[currentRace.tier as keyof typeof tierColors] || tierColors.C
-                    } p-6 rounded-lg mb-4`}
+                    className={`bg-gradient-to-r ${tierColors[currentFiend.tier] || tierColors.C
+                      } p-6 rounded-lg mb-4`}
                   >
                     <h2 className="text-3xl font-bold text-white mb-2">
-                      {currentRace.name}
+                      {currentFiend.name}
                     </h2>
                     <Badge variant="secondary" className="text-lg bg-white/20 text-white">
-                      {currentRace.tier} Tier - {currentRace.rarity}
+                      {currentFiend.tier} Tier - {currentFiend.rarity}
                     </Badge>
                   </div>
-                  <p className="text-gray-700 dark:text-gray-300 mb-4 font-medium">{currentRace.description}</p>
+                  <p className="text-gray-700 dark:text-gray-300 mb-4 font-medium">{currentFiend.description}</p>
                   <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
                     <h3 className="font-semibold text-gray-800 dark:text-gray-100 mb-2">
                       Abilities:
                     </h3>
                     <ul className="space-y-1">
-                      {(currentRace.abilities || currentRace.passives || []).map((ability: string, idx: number) => (
+                      {(currentFiend.abilities || []).map((ability: string, idx: number) => (
                         <li
                           key={idx}
                           className="text-sm text-gray-600 dark:text-gray-300 flex items-center justify-center gap-2"
                         >
-                          <span className="text-amber-500 dark:text-amber-400">•</span>
+                          <span className="text-red-500 dark:text-red-400">•</span>
                           {ability}
                         </li>
                       ))}
@@ -185,7 +187,7 @@ export default function RerollSimulatorPage() {
                     Reset
                   </Button>
                   <span className="text-gray-600 dark:text-gray-400">
-                    Total Rolls: <strong className="text-amber-600 dark:text-amber-400">{rollCount}</strong>
+                    Total Rolls: <strong className="text-red-600 dark:text-red-400">{rollCount}</strong>
                   </span>
                 </div>
               )}
@@ -200,8 +202,8 @@ export default function RerollSimulatorPage() {
               </CardHeader>
               <CardContent>
                 <div className="space-y-2">
-                  {rollHistory.map((race, index) => (
-                    race && (
+                  {rollHistory.map((fiend, index) => (
+                    fiend && (
                       <div
                         key={index}
                         className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700"
@@ -209,21 +211,21 @@ export default function RerollSimulatorPage() {
                         <div className="flex items-center gap-3">
                           <Badge
                             variant={
-                              race.tier === "S"
-                                ? "default"
-                                : race.tier === "A"
-                                ? "secondary"
-                                : "outline"
+                              fiend.tier === "S+" || fiend.tier === "S"
+                                ? "destructive"
+                                : fiend.tier === "A"
+                                  ? "default"
+                                  : "outline"
                             }
                           >
-                            {race.tier || "?"}
+                            {fiend.tier || "?"}
                           </Badge>
                           <span className="font-semibold text-gray-800 dark:text-gray-100">
-                            {race.name}
+                            {fiend.name}
                           </span>
                         </div>
                         <span className="text-xs text-gray-700 dark:text-gray-300 font-medium">
-                          {race.rarity || "Unknown"}
+                          {fiend.rarity || "Unknown"}
                         </span>
                       </div>
                     )
@@ -242,15 +244,26 @@ export default function RerollSimulatorPage() {
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-3">
-                <div className="flex items-center justify-between p-3 bg-gradient-to-r from-red-50 to-orange-50 rounded-lg border border-red-200">
+                <div className="flex items-center justify-between p-3 bg-gradient-to-r from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 rounded-lg border border-orange-200 dark:border-orange-800">
                   <div className="flex items-center gap-2">
-                    <Badge className="bg-gradient-to-r from-red-600 to-orange-600">
+                    <Badge className="bg-gradient-to-r from-orange-600 to-red-600">
+                      S+
+                    </Badge>
+                    <span className="text-sm text-gray-700 dark:text-gray-300 font-medium">Chainsaw</span>
+                  </div>
+                  <span className="font-bold text-orange-600 dark:text-orange-400">
+                    0.1%
+                  </span>
+                </div>
+                <div className="flex items-center justify-between p-3 bg-gradient-to-r from-red-50 to-pink-50 dark:from-red-900/20 dark:to-pink-900/20 rounded-lg border border-red-200 dark:border-red-800">
+                  <div className="flex items-center gap-2">
+                    <Badge className="bg-gradient-to-r from-red-600 to-pink-600">
                       S
                     </Badge>
-                    <span className="text-sm text-gray-700 dark:text-gray-300 font-medium">Tier (Legendary)</span>
+                    <span className="text-sm text-gray-700 dark:text-gray-300 font-medium">Tier (Rare)</span>
                   </div>
                   <span className="font-bold text-red-600 dark:text-red-400">
-                    {(raceProbabilities.S * 100).toFixed(1)}%
+                    1.0%
                   </span>
                 </div>
                 <div className="flex items-center justify-between p-3 bg-gradient-to-r from-amber-50 to-yellow-50 dark:from-amber-900/20 dark:to-yellow-900/20 rounded-lg border border-amber-200 dark:border-amber-800">
@@ -258,10 +271,10 @@ export default function RerollSimulatorPage() {
                     <Badge className="bg-gradient-to-r from-amber-600 to-yellow-600">
                       A
                     </Badge>
-                    <span className="text-sm text-gray-700 dark:text-gray-300 font-medium">Tier (Rare)</span>
+                    <span className="text-sm text-gray-700 dark:text-gray-300 font-medium">Tier (Legendary)</span>
                   </div>
                   <span className="font-bold text-amber-600 dark:text-amber-400">
-                    {(raceProbabilities.A * 100).toFixed(1)}%
+                    5.0%
                   </span>
                 </div>
                 <div className="flex items-center justify-between p-3 bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
@@ -269,21 +282,21 @@ export default function RerollSimulatorPage() {
                     <Badge className="bg-gradient-to-r from-blue-600 to-cyan-600">
                       B
                     </Badge>
-                    <span className="text-sm text-gray-700 dark:text-gray-300 font-medium">Tier (Good)</span>
+                    <span className="text-sm text-gray-700 dark:text-gray-300 font-medium">Tier (Epic)</span>
                   </div>
                   <span className="font-bold text-blue-600 dark:text-blue-400">
-                    {(raceProbabilities.B * 100).toFixed(1)}%
+                    15.0%
                   </span>
                 </div>
                 <div className="flex items-center justify-between p-3 bg-gradient-to-r from-gray-50 to-slate-50 dark:from-gray-800 dark:to-slate-800 rounded-lg border border-gray-200 dark:border-gray-700">
                   <div className="flex items-center gap-2">
                     <Badge className="bg-gradient-to-r from-gray-600 to-slate-600">
-                      D
+                      C
                     </Badge>
                     <span className="text-sm text-gray-700 dark:text-gray-300 font-medium">Tier (Common)</span>
                   </div>
                   <span className="font-bold text-gray-600 dark:text-gray-400">
-                    {(raceProbabilities.D * 100).toFixed(1)}%
+                    78.9%
                   </span>
                 </div>
               </div>
@@ -297,10 +310,10 @@ export default function RerollSimulatorPage() {
             </CardHeader>
             <CardContent>
               <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-3">
-                Get free rerolls by redeeming <Link href="/codes" className="text-amber-600 dark:text-amber-400 hover:underline font-semibold">The Forge codes</Link> like &quot;100K!&quot; or &quot;40KLIKES&quot;. You can also earn rerolls by completing daily quests and finding hidden chests.
+                Get free Fiend Rerolls by redeeming <Link href="/codes" className="text-red-600 dark:text-red-400 hover:underline font-semibold">Devil Hunter codes</Link> like &quot;100KLIKES&quot; or &quot;FPS&quot;. Each code grants multiple rerolls!
               </p>
               <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
-                Before using your rerolls, check our <Link href="/wiki/race-tier-list" className="text-amber-600 dark:text-amber-400 hover:underline font-semibold">Race Tier List</Link> to see which races are worth aiming for!
+                Check our <Link href="/wiki/fiends" className="text-red-600 dark:text-red-400 hover:underline font-semibold">Fiend Tier List</Link> to see which Fiends are worth aiming for!
               </p>
             </CardContent>
           </Card>
@@ -311,214 +324,75 @@ export default function RerollSimulatorPage() {
             </CardHeader>
             <CardContent>
               <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
-                This <strong>The Forge reroll simulator</strong> uses approximate probabilities based on community data. Actual in-game rates may vary. Use this tool to understand your chances of getting <strong>Legendary races</strong> before spending reroll tokens or Gems!
+                This <strong>Devil Hunter reroll simulator</strong> uses probability data from community research. The ultra-rare <strong>Chainsaw Fiend</strong> has only a <strong>0.1% drop rate</strong> - on average you&apos;ll need 1000 rerolls to get one!
               </p>
             </CardContent>
           </Card>
         </div>
       </div>
 
-      {/* SEO Content: What, How, FAQ */}
+      {/* SEO Content: Extended Guide */}
       <div className="mt-12 space-y-8">
-        {/* What Section */}
         <Card>
           <CardHeader>
-            <CardTitle className="text-2xl">What is The Forge Race Reroll Simulator?</CardTitle>
+            <CardTitle className="text-2xl">What is the Devil Hunter Fiend Reroll Simulator?</CardTitle>
           </CardHeader>
-          <CardContent className="prose prose-lg max-w-none">
+          <CardContent className="prose prose-lg dark:prose-invert max-w-none">
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-              The <strong>Race Reroll Simulator</strong> is an interactive tool designed to help <strong>The Forge Roblox</strong> players understand their chances of obtaining different races before spending valuable reroll tokens or Gems. This simulator uses probability data collected from the community and game mechanics to provide accurate estimates of race drop rates.
+              The <strong>Fiend Reroll Simulator</strong> is an interactive tool designed to help <strong>Devil Hunter Roblox</strong> players understand their chances of obtaining different Fiend forms before spending valuable reroll tokens or Robux.
             </p>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-              In <strong>The Forge</strong>, your race determines your character&apos;s abilities, stats, and playstyle. Races range from Common (D-tier) to Mythical (S-tier), with S-tier races like <strong>Angel</strong> and <strong>Demon</strong> having only a 2% drop rate. This makes race selection one of the most important decisions in the game.
-            </p>
-            <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-              Our simulator allows you to test hundreds of rerolls instantly, helping you make informed decisions about when to use your reroll tokens. This tool is based on extensive gameplay data and community research, making it a trusted resource for <strong>The Forge</strong> players worldwide.
-            </p>
-            <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-              <strong>Expert Verification:</strong> Our probability data comes from analyzing over 10,000+ community reroll results and cross-referencing with official game mechanics. The drop rates (2% S-tier, 15% A-tier, 50% B-tier, 33% D-tier) have been verified through extensive testing by our team of experienced players.
+              In <strong>Devil Hunter</strong>, your Fiend form determines your combat abilities, transformations, and overall power level. Fiends range from Common (C-tier) like Zombie Fiend to the ultra-rare <strong>Chainsaw Fiend</strong> (S+ tier) with only a 0.1% drop rate.
             </p>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-              <strong>Trustworthy Source:</strong> This simulator is maintained by players who have personally completed hundreds of rerolls and documented the results. We update our probability data whenever game patches change race drop rates, ensuring accuracy for the current game version.
+              This simulator uses probability data collected from the community to provide accurate estimates of Fiend drop rates. Test your luck here before spending real money!
             </p>
           </CardContent>
         </Card>
 
-        {/* Advanced Probability & Strategy Section */}
         <Card>
           <CardHeader>
-            <CardTitle className="text-2xl">Probability Calculations & Optimal Reroll Strategy</CardTitle>
+            <CardTitle className="text-2xl">Probability Calculations & Strategy</CardTitle>
           </CardHeader>
-          <CardContent className="prose prose-lg max-w-none">
+          <CardContent className="prose prose-lg dark:prose-invert max-w-none">
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
-              <div>
-                <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-gray-100">Understanding Probability Mathematics</h3>
-                <p className="leading-relaxed mb-3">
-                  The probability system in <strong>The Forge</strong> uses a weighted random distribution. Here&apos;s how the math works:
-                </p>
-                <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-4 mb-3">
-                  <p className="text-sm mb-2"><strong>Probability Distribution:</strong></p>
-                  <ul className="text-sm space-y-1 list-disc pl-5">
-                    <li><strong>S-tier (Mythical):</strong> 2% chance per roll = 1 in 50 average</li>
-                    <li><strong>A-tier (Rare):</strong> 15% chance per roll = 1 in 6.67 average</li>
-                    <li><strong>B-tier (Good):</strong> 50% chance per roll = 1 in 2 average</li>
-                    <li><strong>D-tier (Common):</strong> 33% chance per roll = 1 in 3 average</li>
-                  </ul>
-                </div>
-                <p className="leading-relaxed mb-3">
-                  <strong>Cumulative Probability Formula:</strong> The chance of getting at least one S-tier race after N rerolls is calculated as: <code className="bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">1 - (0.98)^N</code>. For example:
-                </p>
-                <ul className="list-disc pl-6 space-y-1 mb-3 text-sm">
-                  <li>After 10 rerolls: ~18% chance of getting an S-tier</li>
-                  <li>After 25 rerolls: ~40% chance of getting an S-tier</li>
-                  <li>After 50 rerolls: ~64% chance of getting an S-tier</li>
-                  <li>After 100 rerolls: ~87% chance of getting an S-tier</li>
+              <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4 mb-3">
+                <p className="text-sm mb-2"><strong>Probability Distribution:</strong></p>
+                <ul className="text-sm space-y-1 list-disc pl-5">
+                  <li><strong>Chainsaw Fiend (S+):</strong> 0.1% chance = 1 in 1000 average</li>
+                  <li><strong>S-tier:</strong> 1% chance = 1 in 100 average</li>
+                  <li><strong>A-tier (Legendary):</strong> 5% chance = 1 in 20 average</li>
+                  <li><strong>B-tier (Epic):</strong> 15% chance = 1 in 6.67 average</li>
+                  <li><strong>C-tier (Common):</strong> 78.9% chance</li>
                 </ul>
-                <p className="leading-relaxed">
-                  <strong>Important Note:</strong> Each reroll is independent - previous rolls don&apos;t affect future ones. This means you could theoretically get an S-tier on your first roll (2% chance) or need 200+ rolls (rare but possible).
-                </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-gray-100">Optimal Reroll Strategy Guide</h3>
-                <p className="leading-relaxed mb-3">
-                  Based on our analysis of thousands of reroll results, here are proven strategies for maximizing your chances:
-                </p>
-                <div className="space-y-3">
-                  <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
-                    <h4 className="font-bold mb-2 text-gray-900 dark:text-gray-100">Strategy 1: Save for S-Tier (Conservative)</h4>
-                    <p className="text-sm leading-relaxed">
-                      Save all rerolls until you have 50+ tokens. This gives you a ~64% chance of getting an S-tier race. Best for players who want the absolute best race and don&apos;t mind waiting. Use this simulator to test if you have the patience for this strategy.
-                    </p>
-                  </div>
-                  <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-                    <h4 className="font-bold mb-2 text-gray-900 dark:text-gray-100">Strategy 2: Accept A-Tier (Balanced)</h4>
-                    <p className="text-sm leading-relaxed">
-                      Reroll until you get an A-tier race (15% chance per roll, ~6-7 rolls on average). A-tier races like <strong>Dragonborn</strong> and <strong>Shadow</strong> are excellent for end-game content and much easier to obtain than S-tier. This strategy balances power with realistic expectations.
-                    </p>
-                  </div>
-                  <div className="bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-lg p-4">
-                    <h4 className="font-bold mb-2 text-gray-900 dark:text-gray-100">Strategy 3: Quick B-Tier (Aggressive)</h4>
-                    <p className="text-sm leading-relaxed">
-                      Reroll until you get a B-tier race (50% chance per roll, ~2 rolls on average). B-tier races like <strong>Dwarf</strong> (+40% mining speed) are significantly better than D-tier and easy to obtain. Best for players who want immediate improvement without waiting.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-gray-100">When to Stop Rerolling: Decision Framework</h3>
-                <p className="leading-relaxed mb-3">
-                  Knowing when to stop rerolling is crucial. Here&apos;s our expert recommendation framework:
-                </p>
+                <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-gray-100">Optimal Strategy</h3>
                 <ul className="list-disc pl-6 space-y-2 text-sm">
-                  <li><strong>If you have D-tier (Common):</strong> Always reroll. You have a 50% chance of getting B-tier, which is a massive upgrade. Stop if you get B-tier or higher.</li>
-                  <li><strong>If you have B-tier:</strong> Consider keeping it unless you have 25+ rerolls saved. B-tier is solid for most content, and the 15% chance for A-tier might not be worth the risk.</li>
-                  <li><strong>If you have A-tier:</strong> Only reroll if you have 50+ rerolls and are specifically aiming for S-tier. A-tier races are excellent and the 2% S-tier chance is very low.</li>
-                  <li><strong>If you have S-tier:</strong> Never reroll. You have the best possible race - keep it!</li>
+                  <li><strong>If you have C-tier:</strong> Always reroll. You have a 21% chance of getting B-tier or higher.</li>
+                  <li><strong>If you have B-tier:</strong> Consider keeping unless you have 50+ rerolls. B-tier is solid for most content.</li>
+                  <li><strong>If you have A-tier:</strong> Only reroll if you&apos;re specifically chasing Chainsaw Fiend and have 500+ rerolls saved.</li>
+                  <li><strong>If you have Chainsaw Fiend:</strong> Never reroll. You&apos;ve won the lottery!</li>
                 </ul>
               </div>
             </div>
           </CardContent>
         </Card>
 
-        {/* How Section */}
         <Card>
           <CardHeader>
-            <CardTitle className="text-2xl">How to Use The Forge Reroll Simulator</CardTitle>
+            <CardTitle className="text-2xl">Best Fiends to Reroll For</CardTitle>
           </CardHeader>
-          <CardContent className="prose prose-lg max-w-none">
-            <div className="space-y-4 text-gray-700 dark:text-gray-300">
-              <div>
-                <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-gray-100">Step 1: Click &quot;Roll Now&quot;</h3>
-                <p className="leading-relaxed">
-                  Simply click the <strong>&quot;Roll Now&quot;</strong> button to simulate a single race reroll. The simulator will randomly select a race based on the actual in-game probability distribution: 2% for S-tier, 15% for A-tier, 50% for B-tier, and 33% for D-tier (Common/Human).
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-gray-100">Step 2: Review Your Results</h3>
-                <p className="leading-relaxed">
-                  After each roll, you&apos;ll see the race name, tier, rarity, and abilities. The simulator tracks your roll history, showing your last 10 results. This helps you understand the probability distribution and see how many rolls it typically takes to get your desired race.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-gray-100">Step 3: Analyze Your Chances</h3>
-                <p className="leading-relaxed">
-                  Use the probability panel on the right to understand your odds. For example, if you&apos;re aiming for an S-tier race like <strong>Angel</strong> or <strong>Demon</strong>, you have approximately a 2% chance per roll. This means you might need 50+ rerolls on average to get one.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-gray-100">Step 4: Plan Your Strategy</h3>
-                <p className="leading-relaxed">
-                  Before spending your reroll tokens in-game, use this simulator to test different scenarios. If you&apos;re satisfied with A-tier or B-tier races, you&apos;ll have much better odds (15% and 50% respectively). Check our <Link href="/wiki/race-tier-list" className="text-amber-600 dark:text-amber-400 hover:underline font-semibold">Race Tier List</Link> to see which races are worth aiming for based on your playstyle.
-                </p>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* FAQ Section */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl">Frequently Asked Questions (FAQ)</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-6">
-            <div>
-              <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-gray-100">How accurate is this reroll simulator?</h3>
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                Our simulator is based on probability data collected from thousands of community rerolls and verified against in-game mechanics. The probabilities (2% S-tier, 15% A-tier, 50% B-tier, 33% D-tier) are approximations based on extensive gameplay data. Actual in-game rates may vary slightly, but this simulator provides a reliable estimate for planning purposes.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-gray-100">How do I get free rerolls in The Forge?</h3>
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                You can obtain free rerolls through several methods: (1) Redeem active codes like <strong>&quot;100K!&quot;</strong>, <strong>&quot;40KLIKES&quot;</strong>, or <strong>&quot;20KLIKES&quot;</strong> from our <Link href="/codes" className="text-amber-600 dark:text-amber-400 hover:underline font-semibold">codes page</Link>, (2) Complete daily quests that reward reroll tokens, (3) Find hidden chests in the Volcanic Depths area, and (4) Purchase rerolls using in-game Gems at the Wizard NPC in Stonewake&apos;s Cross.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-gray-100">What are the best races to reroll for?</h3>
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                The best races are S-tier Mythical races like <strong>Angel</strong> and <strong>Demon</strong>, which offer the highest stats and unique abilities. However, with only a 2% drop rate, they&apos;re extremely rare. A-tier races like <strong>Dragonborn</strong> (fire immunity, massive damage) and <strong>Shadow</strong> (dodge chance, PVP meta) are excellent alternatives with a 15% drop rate. For mining-focused players, B-tier <strong>Dwarf</strong> (+40% mining speed) is highly valuable. Check our <Link href="/wiki/race-tier-list" className="text-amber-600 dark:text-amber-400 hover:underline font-semibold">complete Race Tier List</Link> for detailed rankings.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-gray-100">Should I save my rerolls or use them immediately?</h3>
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                It depends on your current race and goals. If you have a D-tier (Common) race, it&apos;s generally worth rerolling since you have a 50% chance of getting a B-tier race, which is a significant upgrade. However, if you already have a B-tier or A-tier race, consider saving rerolls until you have enough to statistically guarantee an S-tier (approximately 50+ rerolls). Use this simulator to test different scenarios before committing your resources.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-gray-100">Can I get a specific race, or is it completely random?</h3>
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                Race rerolls are completely random within each tier. You cannot choose a specific race, but you can influence your odds by understanding the tier system. For example, if you want an S-tier race, you have a 2% chance per roll, but the specific S-tier race (Angel, Demon, etc.) is randomly selected from the S-tier pool. This simulator helps you understand these probabilities before spending your reroll tokens.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-gray-100">What&apos;s the difference between using codes vs. Gems for rerolls?</h3>
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                Both methods use the same probability system - there&apos;s no difference in drop rates whether you use free rerolls from codes or paid rerolls purchased with Gems. The advantage of using codes is that they&apos;re free, but they&apos;re limited in quantity. Gems allow unlimited rerolls but cost in-game currency. We recommend using free rerolls from codes first, then deciding if you want to invest Gems based on your results.
-              </p>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Best Races Section */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl">Best Races to Reroll For in The Forge</CardTitle>
-          </CardHeader>
-          <CardContent className="prose prose-lg max-w-none">
+          <CardContent className="prose prose-lg dark:prose-invert max-w-none">
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-              If you&apos;re looking to get the best race in <strong>The Forge</strong>, aim for <strong>S-tier Mythical races</strong> like <strong>Angel</strong> or <strong>Demon</strong>. These races have the highest stats and are perfect for any playstyle - PVP, PVE, mining, or forging.
+              The absolute best Fiend is <strong>Chainsaw Fiend</strong> (S+ tier, 0.1% drop rate). It has the unique ability to permanently delete other devils by consuming them, plus insane regeneration. However, with only a 0.1% drop rate, you&apos;ll need extreme luck.
             </p>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-              For end-game content, <strong>Dragonborn</strong> (A-tier) is unmatched with fire immunity and massive damage bonuses, making it ideal for challenging the Goblin King and other difficult bosses. If you prefer PVP combat, <strong>Shadow</strong> (A-tier) provides dodge chance, making it the current PVP meta choice.
-            </p>
-            <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-              For mining-focused players, <strong>Dwarf</strong> (B-tier) provides +40% mining speed, which is extremely valuable for gathering rare ores efficiently. While not as powerful as S-tier races, B-tier races are much easier to obtain (50% drop rate) and can significantly improve your gameplay experience.
+              For more realistic goals, A-tier Fiends like <strong>Shark Fiend</strong>, <strong>Violence Fiend</strong>, and <strong>Power Fiend</strong> are excellent choices with a 5% combined drop rate. Shark Fiend has dive combos, Violence Fiend has burst damage, and Power Fiend has versatile blood manipulation.
             </p>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-              Remember: S-tier races have only a <strong>2% drop rate</strong>, so save up your rerolls and use them wisely! On average, you&apos;ll need 50+ rerolls to get an S-tier race. Use this simulator to test your luck before committing your resources. Check our <Link href="/wiki/races" className="text-amber-600 dark:text-amber-400 hover:underline font-semibold">complete Races guide</Link> for detailed information on all races, their abilities, and optimal playstyles.
+              Check our <Link href="/wiki/fiends" className="text-red-600 dark:text-red-400 hover:underline font-semibold">complete Fiend Tier List</Link> for detailed rankings and ability breakdowns!
             </p>
           </CardContent>
         </Card>

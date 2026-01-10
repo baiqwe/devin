@@ -1,113 +1,64 @@
 [
   {
-    "code": "XMAS!",
-    "reward": "5x Race Rerolls",
-    "status": "Active",
-    "isNew": true,
-    "description": "NEW! Christmas 2025 code. Essential for getting the Archangel race (0.1% drop rate)."
-  },
-  {
-    "code": "SORRYFORDELAY",
-    "reward": "5x Race Rerolls",
-    "status": "Active",
-    "isNew": true,
-    "description": "NEW! Compensation for Winter Update delay. Use for Archangel rerolls."
-  },
-  {
-    "code": "HEART",
-    "reward": "10x Race Rerolls, 1x Luck Totem",
-    "status": "Active",
-    "isUnstable": true,
-    "description": "UNSTABLE - May expire within 24 hours. Redeem immediately!"
-  },
-  {
-    "code": "FREESPINS",
-    "reward": "8x Race Rerolls, 1x Luck Totem",
-    "status": "Active",
-    "description": "Latest compensation code. Mostly used for race rerolls."
-  },
-  {
-    "code": "PEAK!",
-    "reward": "10x Rerolls",
-    "status": "Expired",
-    "description": "Might work in some new servers, but generally considered expired."
-  },
-  {
-    "code": "SORRYFORSHUTDOWN",
-    "reward": "5x Rerolls",
-    "status": "Expired",
-    "description": "Compensation code for shutdown. Likely expired."
-  },
-  {
-    "code": "400K!",
-    "reward": "Unknown",
-    "status": "Expired",
-    "description": "Milestone code."
-  },
-  {
-    "code": "300K!",
-    "reward": "5x Race Rerolls, 1x Luck Totem",
-    "status": "Expired",
-    "description": "Milestone celebration code."
-  },
-  {
-    "code": "200K!",
-    "reward": "5 Race Rerolls",
-    "status": "Expired",
-    "description": "Milestone celebration code."
-  },
-  {
     "code": "100KLIKES",
-    "reward": "10x Race Rerolls",
-    "status": "Expired",
-    "description": "Major milestone reward."
+    "reward": "2 Fiend Rerolls, 2 Clan Rerolls, 1 Haircolor Reroll",
+    "status": "Active",
+    "isNew": true,
+    "description": "NEW! Major milestone reward - perfect for rerolling your Fiend form."
   },
   {
-    "code": "100K!",
-    "reward": "3 Race Rerolls",
-    "status": "Expired",
-    "description": "Celebration code for 100k likes."
+    "code": "FPS",
+    "reward": "2 Fiend Rerolls, 2 Clan Rerolls",
+    "status": "Active",
+    "isNew": true,
+    "description": "Performance optimization compensation code. Great for Fiend and Clan rerolls."
   },
   {
-    "code": "BETARELEASE!",
-    "reward": "2 Race Rerolls",
-    "status": "Expired",
-    "description": "Welcome reward for the beta launch."
+    "code": "ILOVEROBLOX",
+    "reward": "15,000 Yen, 1 Fiend Reroll, 1 Clan Reroll",
+    "status": "Active",
+    "description": "Community celebration code with Yen bonus!"
   },
   {
-    "code": "RELEASE",
-    "reward": "500 Gems",
-    "status": "Expired",
-    "description": "Original release code."
+    "code": "75KLIKES",
+    "reward": "200,000 Yen, 1 Fiend Reroll, 1 Clan Reroll",
+    "status": "Active",
+    "description": "MASSIVE Yen reward! Best code for new players starting out."
   },
   {
-    "code": "40KLIKES",
-    "reward": "5 Race Rerolls",
-    "status": "Expired",
-    "description": "Major milestone reward."
+    "code": "SHUTDOWNSORRY",
+    "reward": "75,000 Yen, 1 Skill Point Reset",
+    "status": "Active",
+    "description": "Compensation for server issues. Use the Skill Point Reset wisely!"
+  },
+  {
+    "code": "50KLIKES",
+    "reward": "1 Skill Point Reset, 1 Clan Reroll, 1 Fiend Reroll",
+    "status": "Active",
+    "description": "Milestone celebration code - perfect for build corrections."
   },
   {
     "code": "20KLIKES",
-    "reward": "2 Race Rerolls",
-    "status": "Expired",
-    "description": "Grants additional chances to get a Legendary race."
-  },
-  {
-    "code": "15KLIKES",
-    "reward": "2 Race Rerolls",
-    "status": "Expired",
-    "description": "Milestone reward for race rerolls."
+    "reward": "50,000 Yen, 1 Skill Point Reset, 1 Fiend Reroll, 1 Clan Reroll",
+    "status": "Active",
+    "description": "Great starter pack with Yen and rerolls."
   },
   {
     "code": "10KLIKES",
-    "reward": "2 Race Rerolls + 1 Luck Totem",
-    "status": "Expired",
-    "description": "Boost your luck for mining and crafting."
+    "reward": "25,000 Yen, 1 Fiend Reroll, 1 Clan Reroll",
+    "status": "Active",
+    "description": "Early milestone code - every reroll counts!"
   },
   {
-    "code": "5KLIKES",
-    "reward": "2 Race Rerolls + 1 Miner Totem",
-    "status": "Expired",
-    "description": "Increases mining speed."
+    "code": "MELO150K",
+    "reward": "75,000 Yen, 1 Skill Point Reset, 1 Fiend Reroll, 1 Clan Reroll",
+    "status": "Active",
+    "description": "Creator milestone celebration. Solid all-around rewards."
+  },
+  {
+    "code": "RELEASE2026",
+    "reward": "35,000 Yen, 1 Fiend Reroll, 1 Clan Reroll",
+    "status": "Active",
+    "description": "2026 release celebration code. Don't miss out!"
   }
 ]

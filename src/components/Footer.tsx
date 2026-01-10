@@ -14,7 +14,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               {siteConfig.mainNav.map((item) => (
                 <li key={item.href}>
-                  <a href={item.href} className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400">
+                  <a href={item.href} className="text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-400">
                     {item.title}
                   </a>
                 </li>
@@ -29,21 +29,10 @@ export default function Footer() {
                   href={siteConfig.links.game}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 dark:text-gray-400 hover:text-amber-600 dark:hover:text-amber-400 block flex items-center gap-2"
+                  className="text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-400 block flex items-center gap-2"
                 >
                   <span>🎮</span>
-                  <span>Play The Forge</span>
-                </a>
-              )}
-              {siteConfig.links.youtube && (
-                <a
-                  href={siteConfig.links.youtube}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-red-600 block flex items-center gap-2"
-                >
-                  <span>📺</span>
-                  <span>YouTube</span>
+                  <span>Play Devil Hunter</span>
                 </a>
               )}
               {siteConfig.links.x && (
@@ -81,22 +70,6 @@ export default function Footer() {
               )}
             </div>
           </div>
-          <div>
-            <h4 className="font-semibold mb-4">Wiki Links</h4>
-            <div className="space-y-2 text-sm">
-              {siteConfig.links.officialWiki && (
-                <a
-                  href={siteConfig.links.officialWiki}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 dark:text-gray-400 hover:text-amber-600 dark:hover:text-amber-400 block flex items-center gap-2"
-                >
-                  <span>📚</span>
-                  <span>Official Wiki</span>
-                </a>
-              )}
-            </div>
-          </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6 text-sm">
@@ -104,12 +77,12 @@ export default function Footer() {
               <h5 className="font-semibold mb-2 text-gray-800 dark:text-gray-200">Legal</h5>
               <ul className="space-y-1">
                 <li>
-                  <a href="/privacy" className="text-gray-600 dark:text-gray-400 hover:text-amber-600 dark:hover:text-amber-400">
+                  <a href="/privacy" className="text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-400">
                     Privacy Policy
                   </a>
                 </li>
                 <li>
-                  <a href="/terms" className="text-gray-600 dark:text-gray-400 hover:text-amber-600 dark:hover:text-amber-400">
+                  <a href="/terms" className="text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-400">
                     Terms of Service
                   </a>
                 </li>
@@ -119,12 +92,12 @@ export default function Footer() {
               <h5 className="font-semibold mb-2 text-gray-800 dark:text-gray-200">About</h5>
               <ul className="space-y-1">
                 <li>
-                  <a href="/about" className="text-gray-600 dark:text-gray-400 hover:text-amber-600 dark:hover:text-amber-400">
+                  <a href="/about" className="text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-400">
                     About Us
                   </a>
                 </li>
                 <li>
-                  <a href="/contact" className="text-gray-600 dark:text-gray-400 hover:text-amber-600 dark:hover:text-amber-400">
+                  <a href="/contact" className="text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-400">
                     Contact Us
                   </a>
                 </li>
@@ -133,7 +106,7 @@ export default function Footer() {
           </div>
           <div className="text-center text-sm text-gray-500 dark:text-gray-400">
             <p className="mb-2 text-xs text-gray-400 dark:text-gray-500 max-w-2xl mx-auto">
-              The Forge Wiki is a fan-made website and is not affiliated with, endorsed, sponsored, or specifically approved by the developers of The Forge or Roblox Corporation. All game images and trademarks belong to their respective owners.
+              Devil Hunter Wiki is a fan-made website and is not affiliated with, endorsed, sponsored, or specifically approved by the developers of Devil Hunter or Roblox Corporation. All game images and trademarks belong to their respective owners.
             </p>
             <p>&copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
           </div>
@@ -142,4 +115,3 @@ export default function Footer() {
     </footer>
   )
 }
-

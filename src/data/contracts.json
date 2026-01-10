@@ -1,0 +1,275 @@
+[
+    {
+        "name": "Ghost Devil",
+        "tier": "S",
+        "rarity": "Legendary",
+        "dropRate": "0.5%",
+        "description": "One of the strongest contracts in the game. High bar costs but M1 and M2 grabs serve as excellent combo starters.",
+        "abilities": [
+            "M1 Grab",
+            "M2 Grab",
+            "Spectral Phase",
+            "Soul Drain"
+        ],
+        "stats": {
+            "Damage": "S",
+            "Speed": "A",
+            "Combo": "S"
+        },
+        "obtainable": "Contract Quest / Reroll",
+        "color": "text-purple-400",
+        "special": "Excellent combo starters with grab mechanics"
+    },
+    {
+        "name": "Snake Devil",
+        "tier": "S",
+        "rarity": "Legendary",
+        "dropRate": "0.3%",
+        "description": "A late-game contract requiring a challenging quest. High damage with M1 and M2 variants. Can swallow low-HP devils and resummon them to fight for you.",
+        "abilities": [
+            "Venomous Strike",
+            "Constrict",
+            "Devil Consumption",
+            "Serpent Summon"
+        ],
+        "stats": {
+            "Damage": "S",
+            "Speed": "B",
+            "Combo": "A"
+        },
+        "obtainable": "Snake Devil Quest (Difficult)",
+        "color": "text-green-500",
+        "special": "Unique ability to consume and resummon defeated devils"
+    },
+    {
+        "name": "Mantis Devil",
+        "tier": "S",
+        "rarity": "Legendary",
+        "dropRate": "0.5%",
+        "description": "Game-breaking flow with grab and slam mechanics. Can extend combos even on ragdolled players.",
+        "abilities": [
+            "Mantis Slash",
+            "Aerial Grab",
+            "Ground Slam",
+            "Blade Dance"
+        ],
+        "stats": {
+            "Damage": "A",
+            "Speed": "S",
+            "Combo": "SS"
+        },
+        "obtainable": "Contract Quest / Reroll",
+        "color": "text-lime-400",
+        "special": "Best combo extension in the game"
+    },
+    {
+        "name": "Octopus Devil",
+        "tier": "S",
+        "rarity": "Legendary",
+        "dropRate": "0.5%",
+        "description": "Versatile moves with a block passive. Strong combo extension capabilities.",
+        "abilities": [
+            "Tentacle Lash",
+            "Ink Cloud",
+            "Constricting Grab",
+            "Block Passive"
+        ],
+        "stats": {
+            "Damage": "A",
+            "Speed": "A",
+            "Combo": "S"
+        },
+        "obtainable": "Contract Quest / Reroll",
+        "color": "text-pink-400",
+        "special": "Unique block passive for defensive play"
+    },
+    {
+        "name": "Curse Devil",
+        "tier": "S",
+        "rarity": "Mythical",
+        "dropRate": "0.2%",
+        "description": "Master of nail curses. Extremely powerful debuff abilities.",
+        "abilities": [
+            "Nail Curse",
+            "Curse Mark",
+            "Pain Transfer",
+            "Doom Seal"
+        ],
+        "stats": {
+            "Damage": "S",
+            "Speed": "B",
+            "Combo": "A"
+        },
+        "obtainable": "Rare Reroll / Special Quest",
+        "color": "text-gray-800",
+        "special": "Nail curses deal massive damage over time"
+    },
+    {
+        "name": "Bat Devil",
+        "tier": "A",
+        "rarity": "Epic",
+        "dropRate": "2%",
+        "description": "Strong for PvE with sonic blasts. Good for chasing, though moves can be full-blocked in PvP.",
+        "abilities": [
+            "Sonic Blast",
+            "Echolocation",
+            "Wing Dash",
+            "Blood Drain"
+        ],
+        "stats": {
+            "Damage": "A",
+            "Speed": "S",
+            "Combo": "B"
+        },
+        "obtainable": "Contract Quest / Common Reroll",
+        "color": "text-gray-600",
+        "special": "Best for PvE content and chasing targets"
+    },
+    {
+        "name": "Fox Devil",
+        "tier": "A",
+        "rarity": "Epic",
+        "dropRate": "2%",
+        "description": "Features tail swipes and illusion abilities. Great mobility.",
+        "abilities": [
+            "Tail Swipe",
+            "Fox Fire",
+            "Illusion",
+            "Spirit Dash"
+        ],
+        "stats": {
+            "Damage": "B",
+            "Speed": "S",
+            "Combo": "A"
+        },
+        "obtainable": "Contract Quest / Common Reroll",
+        "color": "text-orange-400",
+        "special": "High mobility with illusion capabilities"
+    },
+    {
+        "name": "Future Devil",
+        "tier": "A",
+        "rarity": "Epic",
+        "dropRate": "1.5%",
+        "description": "Unique precognition abilities. Often associated with Public Safety faction.",
+        "abilities": [
+            "Future Sight",
+            "Prediction Strike",
+            "Time Skip",
+            "Fate Seal"
+        ],
+        "stats": {
+            "Damage": "B",
+            "Speed": "A",
+            "Combo": "A"
+        },
+        "obtainable": "Public Safety Quest Line",
+        "color": "text-cyan-400",
+        "special": "Can predict enemy moves for easy counters"
+    },
+    {
+        "name": "Sea Cucumber Devil",
+        "tier": "A",
+        "rarity": "Rare",
+        "dropRate": "5%",
+        "description": "Known for its M2 auto-lock. A strong 'noob stomper' that catches opponents off guard.",
+        "abilities": [
+            "Auto-Lock M2",
+            "Slime Trail",
+            "Regeneration",
+            "Toxin Spray"
+        ],
+        "stats": {
+            "Damage": "B",
+            "Speed": "C",
+            "Combo": "A"
+        },
+        "obtainable": "Easy Contract Quest",
+        "color": "text-teal-400",
+        "special": "Auto-lock makes it beginner friendly"
+    },
+    {
+        "name": "Zombie Devil",
+        "tier": "A",
+        "rarity": "Epic",
+        "dropRate": "2%",
+        "description": "Allows summoning zombies. Drops from the Zombie Raid.",
+        "abilities": [
+            "Zombie Summon",
+            "Undead Army",
+            "Corpse Explosion",
+            "Life Steal"
+        ],
+        "stats": {
+            "Damage": "A",
+            "Speed": "C",
+            "Combo": "B"
+        },
+        "obtainable": "Zombie Raid Drop",
+        "color": "text-green-700",
+        "special": "Summon zombie army to fight for you"
+    },
+    {
+        "name": "Angel Devil",
+        "tier": "A",
+        "rarity": "Epic",
+        "dropRate": "1.5%",
+        "description": "Life drain abilities. Previously S-tier but still solid. Effective despite being overshadowed.",
+        "abilities": [
+            "Life Drain",
+            "Holy Light",
+            "Feather Dash",
+            "Divine Protection"
+        ],
+        "stats": {
+            "Damage": "A",
+            "Speed": "A",
+            "Combo": "B"
+        },
+        "obtainable": "Rare Reroll / Angel Quest",
+        "color": "text-yellow-200",
+        "special": "Sustain through life drain"
+    },
+    {
+        "name": "Leech Devil",
+        "tier": "B",
+        "rarity": "Rare",
+        "dropRate": "8%",
+        "description": "Requires human hearts to obtain. Good sustain through blood drain.",
+        "abilities": [
+            "Blood Drain",
+            "Latch",
+            "Health Siphon",
+            "Parasite"
+        ],
+        "stats": {
+            "Damage": "C",
+            "Speed": "B",
+            "Combo": "C"
+        },
+        "obtainable": "Requires Human Hearts (Surgery Kit)",
+        "color": "text-red-600",
+        "special": "Need Surgery Kit to harvest required parts"
+    },
+    {
+        "name": "Mold Devil",
+        "tier": "B",
+        "rarity": "Rare",
+        "dropRate": "8%",
+        "description": "Requires human legs to obtain. Area denial and DoT specialist.",
+        "abilities": [
+            "Spore Cloud",
+            "Mold Growth",
+            "Decay Aura",
+            "Fungal Explosion"
+        ],
+        "stats": {
+            "Damage": "B",
+            "Speed": "C",
+            "Combo": "C"
+        },
+        "obtainable": "Requires Human Legs (Surgery Kit)",
+        "color": "text-emerald-600",
+        "special": "Need Surgery Kit to harvest required parts"
+    }
+]

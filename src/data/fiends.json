@@ -1,0 +1,162 @@
+[
+    {
+        "name": "Chainsaw Fiend",
+        "tier": "S+",
+        "rarity": "Secret",
+        "dropRate": "0.1%",
+        "description": "The ultimate fiend form from the Chainsaw Man. Extremely powerful regeneration and devil consumption abilities.",
+        "passives": [
+            "Devil Consumption: Absorb defeated devils to gain Fear",
+            "Chainsaw Regeneration: Extreme HP recovery",
+            "Fear Aura: Nearby enemies take passive damage"
+        ],
+        "abilities": [
+            "Chainsaw Slash",
+            "Chain Pull",
+            "Devil Eater",
+            "Berserk Mode"
+        ],
+        "special": "Can permanently delete devils by consuming them. The rarest and most powerful fiend.",
+        "color": "text-orange-600"
+    },
+    {
+        "name": "Shark Fiend",
+        "tier": "A",
+        "rarity": "Legendary",
+        "dropRate": "1%",
+        "description": "High A-tier fiend with diving abilities. Fast M1 attacks that can be spammed effectively.",
+        "passives": [
+            "Dive: Free combo extender ability",
+            "Fast M1: Rapid attack speed",
+            "Water Affinity: Faster in water areas"
+        ],
+        "abilities": [
+            "Shark Dive",
+            "Bite Rush",
+            "Fin Slash",
+            "Blood Frenzy"
+        ],
+        "special": "Dive acts as a free combo extender. Excellent for aggressive playstyles.",
+        "color": "text-blue-500"
+    },
+    {
+        "name": "Violence Fiend",
+        "tier": "A",
+        "rarity": "Legendary",
+        "dropRate": "1%",
+        "description": "Mask-wearing fiend with incredible combat abilities. Must wear mask to control power.",
+        "passives": [
+            "Masked Power: Controlled strength while masked",
+            "Unleashed: Remove mask for massive damage boost",
+            "Combat Expertise: Enhanced M1 combos"
+        ],
+        "abilities": [
+            "Masked Strike",
+            "Unleash Power",
+            "Brutal Combo",
+            "Finishing Blow"
+        ],
+        "special": "Can remove mask temporarily for massive damage at the cost of control.",
+        "color": "text-purple-600"
+    },
+    {
+        "name": "Power Fiend",
+        "tier": "A",
+        "rarity": "Legendary",
+        "dropRate": "1.5%",
+        "description": "Blood manipulation fiend. Can create weapons from blood.",
+        "passives": [
+            "Blood Manipulation: Create weapons from blood",
+            "Blood Spear: Ranged attack option",
+            "Regeneration: Heal by consuming blood"
+        ],
+        "abilities": [
+            "Blood Hammer",
+            "Blood Spear Throw",
+            "Crimson Shield",
+            "Blood Explosion"
+        ],
+        "special": "Versatile blood-based combat with both melee and ranged options.",
+        "color": "text-red-500"
+    },
+    {
+        "name": "Bomb Fiend",
+        "tier": "B",
+        "rarity": "Epic",
+        "dropRate": "3%",
+        "description": "Explosive specialist. Creates bombs and deals AoE damage.",
+        "passives": [
+            "Explosion Immunity: Immune to own explosions",
+            "Bomb Creation: Generate explosive projectiles",
+            "Blast Radius: Enhanced AoE damage"
+        ],
+        "abilities": [
+            "Bomb Throw",
+            "Cluster Bomb",
+            "Suicide Blast",
+            "Chain Reaction"
+        ],
+        "special": "High AoE damage but risky at close range.",
+        "color": "text-yellow-500"
+    },
+    {
+        "name": "Spider Fiend",
+        "tier": "B",
+        "rarity": "Epic",
+        "dropRate": "3%",
+        "description": "Web and trap specialist. Controls battlefield with webs.",
+        "passives": [
+            "Web Trap: Slow enemies with webs",
+            "Wall Climb: Traverse vertical surfaces",
+            "Venom: Poison damage over time"
+        ],
+        "abilities": [
+            "Web Shot",
+            "Cocoon Trap",
+            "Venom Bite",
+            "Spider Swarm"
+        ],
+        "special": "Excellent crowd control and area denial.",
+        "color": "text-gray-700"
+    },
+    {
+        "name": "Bat Fiend",
+        "tier": "B",
+        "rarity": "Rare",
+        "dropRate": "5%",
+        "description": "Flying fiend with echolocation. Good for scouting and aerial combat.",
+        "passives": [
+            "Flight: Can fly for extended periods",
+            "Echolocation: Detect hidden enemies",
+            "Night Vision: Enhanced vision in dark areas"
+        ],
+        "abilities": [
+            "Sonic Screech",
+            "Wing Slash",
+            "Blood Suck",
+            "Swarm Call"
+        ],
+        "special": "Best mobility among fiends with flight capabilities.",
+        "color": "text-indigo-400"
+    },
+    {
+        "name": "Zombie Fiend",
+        "tier": "C",
+        "rarity": "Common",
+        "dropRate": "15%",
+        "description": "Undead fiend with high durability but slow speed. Good for beginners.",
+        "passives": [
+            "Undead: Cannot be killed by normal means",
+            "Slow Regeneration: Passive health recovery",
+            "Fear Immunity: Immune to fear debuffs"
+        ],
+        "abilities": [
+            "Zombie Bite",
+            "Corpse Explosion",
+            "Undead Horde",
+            "Plague Spread"
+        ],
+        "special": "Tanky fiend for players learning the game.",
+        "color": "text-green-800"
+    }
+]

@@ -1,26 +1,22 @@
 import { Metadata } from 'next'
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Dice5, Calculator, MapPin, Hammer } from 'lucide-react'
+import { Dice5, Skull, Sword } from 'lucide-react'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import SEOHead from '@/components/SEOHead'
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo'
 import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = generateSEOMetadata({
-  title: 'The Forge Calculator & Tools - Forge Simulator, Ore Finder, Reroll',
-  description: 'Free online calculators for The Forge Roblox. Use our Forging Calculator to plan crafting, Ore Depth Finder for mining, and Race Reroll Simulator to test your luck before spending Robux.',
+  title: 'Devil Hunter Tools - Fiend Reroll Simulator, Contract Spinner',
+  description: 'Free online tools for Devil Hunter Roblox. Use our Fiend Reroll Simulator to test your luck before spending Robux. See your chances of getting Chainsaw Fiend or S-tier contracts.',
   keywords: [
-    'the forge calculator',
-    'forge calculator roblox',
-    'the forge tools',
-    'forge reroll simulator',
-    'the forge ore depth',
-    'forging calculator',
-    'ore depth finder',
-    'roblox the forge wiki',
-    'the forge crafting calculator',
-    'race reroll simulator',
+    'devil hunter tools',
+    'devil hunter reroll simulator',
+    'devil hunter fiend simulator',
+    'devil hunter contract spinner',
+    'roblox devil hunter wiki',
+    'fiend reroll calculator',
   ],
   canonicalUrl: `${siteConfig.url}/tools`,
   type: 'website',
@@ -28,31 +24,31 @@ export const metadata: Metadata = generateSEOMetadata({
 
 const tools = [
   {
-    title: 'Reroll Simulator',
-    description: 'Simulate race rerolls to test your luck before spending Robux. See your chances of getting Mythical races like Angel and Demon.',
+    title: 'Fiend Reroll Simulator',
+    description: 'Simulate Fiend rerolls to test your luck before spending Robux. See your chances of getting Chainsaw Fiend (0.1%) and other rare forms.',
     href: '/tools/reroll-simulator',
     icon: Dice5,
-    color: 'from-purple-500 to-indigo-600',
-    hoverColor: 'hover:from-purple-600 hover:to-indigo-700',
+    color: 'from-red-500 to-orange-600',
+    hoverColor: 'hover:from-red-600 hover:to-orange-700',
     badge: 'Popular',
   },
   {
-    title: 'Ore Depth Finder',
-    description: 'Find which ores you can mine at your current depth, or discover the best depth to find specific ores. Essential for efficient mining.',
-    href: '/tools/ore-depth-finder',
-    icon: MapPin,
-    color: 'from-blue-500 to-cyan-600',
-    hoverColor: 'hover:from-blue-600 hover:to-cyan-700',
-    badge: 'New',
+    title: 'Contract Tier Guide',
+    description: 'Browse all devil contracts ranked by tier. Find the best contracts for PvP and PvE, with detailed ability breakdowns.',
+    href: '/wiki/contracts',
+    icon: Sword,
+    color: 'from-purple-500 to-indigo-600',
+    hoverColor: 'hover:from-purple-600 hover:to-indigo-700',
+    badge: 'Guide',
   },
   {
-    title: 'Forging Calculator',
-    description: 'Calculate the exact materials needed to forge weapons and tools. Plan your mining trips efficiently with this comprehensive calculator.',
-    href: '/tools/forging-calculator',
-    icon: Calculator,
-    color: 'from-amber-500 to-orange-600',
-    hoverColor: 'hover:from-amber-600 hover:to-orange-700',
-    badge: 'New',
+    title: 'Fiend Tier Guide',
+    description: 'Complete guide to all Fiend forms. Learn how to become a Fiend and which form is the best for your playstyle.',
+    href: '/wiki/fiends',
+    icon: Skull,
+    color: 'from-gray-700 to-gray-900',
+    hoverColor: 'hover:from-gray-800 hover:to-black',
+    badge: 'Guide',
   },
 ]
 
@@ -74,11 +70,11 @@ export default function ToolsPage() {
       />
 
       <div className="mb-12 text-center">
-        <h1 className="text-4xl md:text-5xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-orange-600">
-          The Forge Tools
+        <h1 className="text-4xl md:text-5xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-orange-600">
+          Devil Hunter Tools
         </h1>
         <p className="text-gray-700 dark:text-gray-300 text-lg max-w-2xl mx-auto">
-          Interactive tools and calculators to help you master The Forge Roblox. Plan your strategy, test your luck, and optimize your gameplay.
+          Interactive tools and calculators to help you master Devil Hunter Roblox. Test your luck with reroll simulators and find the best contracts and fiends.
         </p>
       </div>
 
@@ -91,19 +87,19 @@ export default function ToolsPage() {
               href={tool.href}
               className="group"
             >
-              <Card className="h-full hover:shadow-xl transition-all hover:-translate-y-1 border-2 hover:border-amber-400 dark:hover:border-amber-600">
+              <Card className="h-full hover:shadow-xl transition-all hover:-translate-y-1 border-2 hover:border-red-400 dark:hover:border-red-600">
                 <CardHeader>
                   <div className="flex items-center justify-between mb-2">
                     <div className={`p-3 rounded-lg bg-gradient-to-br ${tool.color} ${tool.hoverColor} transition-all group-hover:scale-110`}>
                       <Icon className="w-6 h-6 text-white" />
                     </div>
                     {tool.badge && (
-                      <span className="px-2 py-1 text-xs font-bold rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-300">
+                      <span className="px-2 py-1 text-xs font-bold rounded-full bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-300">
                         {tool.badge}
                       </span>
                     )}
                   </div>
-                  <CardTitle className="text-xl group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
+                  <CardTitle className="text-xl group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors">
                     {tool.title}
                   </CardTitle>
                 </CardHeader>
@@ -119,60 +115,54 @@ export default function ToolsPage() {
       </div>
 
       {/* Additional Info */}
-      <Card className="bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 border-amber-200 dark:border-amber-800">
+      <Card className="bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 border-red-200 dark:border-red-800">
         <CardContent className="p-6">
           <h2 className="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-100">
             Why Use These Tools?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-700 dark:text-gray-300">
             <div>
-              <h3 className="font-semibold mb-2 text-gray-900 dark:text-gray-100">💰 Save Resources</h3>
-              <p>Plan your mining and forging activities to avoid wasting rare materials on inefficient strategies.</p>
+              <h3 className="font-semibold mb-2 text-gray-900 dark:text-gray-100">💰 Save Robux</h3>
+              <p>Test your reroll luck before spending real money. Know your odds of getting Chainsaw Fiend or S-tier contracts.</p>
             </div>
             <div>
               <h3 className="font-semibold mb-2 text-gray-900 dark:text-gray-100">🎯 Optimize Strategy</h3>
-              <p>Test different approaches before committing to in-game actions. Know your odds before spending Robux.</p>
+              <p>Understand which contracts and fiends are meta. Plan your build before committing to in-game choices.</p>
             </div>
             <div>
               <h3 className="font-semibold mb-2 text-gray-900 dark:text-gray-100">📊 Data-Driven Decisions</h3>
-              <p>Make informed choices based on accurate calculations and probability simulations.</p>
+              <p>Make informed choices based on accurate drop rates and tier rankings from the community.</p>
             </div>
             <div>
               <h3 className="font-semibold mb-2 text-gray-900 dark:text-gray-100">⚡ Save Time</h3>
-              <p>Quickly find the information you need without manually calculating or testing in-game.</p>
+              <p>Quickly find the information you need without searching through Discord or random videos.</p>
             </div>
           </div>
         </CardContent>
       </Card>
 
       {/* SEO Content Section */}
-      <div className="mt-12 prose prose-lg max-w-none bg-white dark:bg-gray-800 p-8 rounded-xl border border-gray-200 dark:border-gray-700">
-        <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">About The Forge Calculator Tools</h2>
+      <div className="mt-12 prose prose-lg dark:prose-invert max-w-none bg-white dark:bg-gray-800 p-8 rounded-xl border border-gray-200 dark:border-gray-700">
+        <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">About Devil Hunter Tools</h2>
 
         <p className="text-gray-700 dark:text-gray-300 mb-4">
-          Our <strong>Forge Calculator</strong> suite provides essential tools for mastering The Forge on Roblox. Whether you&apos;re a new player trying to understand ore depths or an experienced crafter optimizing your forging process, these calculators give you the data you need.
+          Our <strong>Devil Hunter tools</strong> provide essential utilities for mastering Devil Hunter on Roblox. Whether you&apos;re trying to get the rare Chainsaw Fiend or find the best contract for PvP, these tools give you the data you need.
         </p>
 
-        <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mt-6 mb-3">How the Forging Calculator Works</h3>
+        <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mt-6 mb-3">Fiend Reroll Probability</h3>
         <p className="text-gray-700 dark:text-gray-300 mb-4">
-          The Forging Calculator uses the exact in-game recipes to calculate material requirements. Enter your target weapon or tool, and it instantly shows you the ore count, ingot requirements, and estimated mining time. This saves hours of trial-and-error crafting.
+          The Reroll Simulator uses the official drop rates: Common Fiends at 15%, Epic Fiends at 3%, Legendary Fiends at 1%, and the ultra-rare <strong>Chainsaw Fiend at 0.1%</strong>. Simulate thousands of rerolls to understand your true odds before spending Robux.
         </p>
 
-        <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mt-6 mb-3">Ore Depth Finder Algorithm</h3>
+        <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mt-6 mb-3">Contract Tier Rankings</h3>
         <p className="text-gray-700 dark:text-gray-300 mb-4">
-          Our Ore Depth Finder maps all ore spawn ranges from 0m to 1200m+ depth. The algorithm cross-references official spawn tables with community-verified data to show you exactly where each ore spawns, its rarity at each depth level, and optimal farming zones.
-        </p>
-
-        <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mt-6 mb-3">Race Reroll Probability</h3>
-        <p className="text-gray-700 dark:text-gray-300 mb-4">
-          The Reroll Simulator uses the official drop rates: Common races (Human, Goblin) at 30%, Rare races (Dwarf, Elf) at 15%, Epic races at 5%, and Mythical races (Angel, Demon) at 0.5-1%. Simulate thousands of rerolls before spending real Robux to understand your true odds.
+          Our contract tier list is based on community consensus and PvP/PvE effectiveness. S-tier contracts like <strong>Ghost Devil</strong> and <strong>Snake Devil</strong> dominate the meta, while A-tier options provide solid alternatives for most players.
         </p>
 
         <p className="text-gray-600 dark:text-gray-400 text-sm mt-6">
-          All calculator data is verified against The Forge game mechanics as of January 2026. For detailed guides, check our <a href="/blog" className="text-amber-600 dark:text-amber-400 hover:underline">Blog</a> and <a href="/wiki" className="text-amber-600 dark:text-amber-400 hover:underline">Wiki</a>.
+          All tool data is verified against Devil Hunter game mechanics as of January 2026. For detailed guides, check our <a href="/blog" className="text-red-600 dark:text-red-400 hover:underline">Blog</a> and <a href="/wiki" className="text-red-600 dark:text-red-400 hover:underline">Wiki</a>.
         </p>
       </div>
     </div>
   )
 }
-

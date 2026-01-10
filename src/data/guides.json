@@ -1,234 +1,34 @@
 [
   {
-    "slug": "race-tier-list",
-    "title": "Race Tier List - Best Races in The Forge",
-    "description": "Complete tier list ranking all races from S to C tier with detailed analysis. Learn which races are best for PVP, mining, and forging in The Forge Roblox.",
-    "category": "Races",
-    "author": "The Forge Wiki Team",
-    "difficulty": "Beginner",
-    "lastUpdated": "2024-03-15",
-    "content": [
-      {
-        "section": "Introduction to Races",
-        "text": "In The Forge Roblox, your race determines your character's abilities, stats, and playstyle. Races range from Common to Mythical rarity, with Mythical races having only a 0.5% drop rate when rerolling at the Wizard NPC in Stonewake's Cross."
-      },
-      {
-        "section": "S-Tier Races",
-        "text": "The S-tier races are the most powerful in The Forge. Demon (Mythical) offers incredible damage output and is perfect for end-game content. These races excel in both PVP and PVE scenarios, making them highly sought after by competitive players."
-      },
-      {
-        "section": "A-Tier Races",
-        "text": "A-tier races like Shadow provide excellent abilities such as dodge chance, making them the PVP meta choice. These races offer great balance between offense and defense, suitable for most playstyles."
-      },
-      {
-        "section": "B-Tier and C-Tier Races",
-        "text": "Lower tier races are still viable for beginners and casual players. While they may not have the raw power of S-tier races, they often have unique abilities that can be useful in specific situations or for learning the game mechanics."
-      },
-      {
-        "section": "How to Reroll Your Race",
-        "text": "Visit the Wizard NPC at Stonewake's Cross to reroll your race. You can use codes or in-game currency to reroll. Remember that Mythical races are extremely rare (0.5% chance), so be prepared for multiple rerolls if you're aiming for a specific Mythical race."
-      }
-    ],
-    "tags": ["races", "tier-list", "reroll", "beginner", "stats"]
-  },
-  {
-    "slug": "advanced-strategies",
-    "title": "Advanced Strategies for The Forge",
-    "category": "Advanced",
-    "difficulty": "Expert",
-    "author": "Pro Player",
-    "lastUpdated": "2024-03-20",
-    "description": "Master-level strategies for experienced players. Learn optimal mining routes, forging techniques, and quest completion strategies to maximize efficiency in The Forge Roblox.",
-    "content": [
-      {
-        "section": "Optimal Mining Strategy",
-        "text": "To maximize ore gathering in The Forge, focus on getting the Arcane Pickaxe first by completing Bard's Lost Guitar quest. The Arcane Pickaxe provides +200% mining speed, making it essential for efficient resource gathering. Plan your mining depth based on the ores you need for your current crafting goals."
-      },
-      {
-        "section": "Forging Mastery",
-        "text": "Master the 3-step manual forging minigame to consistently create high-quality items. Normal quality is the baseline, but aiming for Masterwork quality significantly increases item stats. Practice the timing and pattern recognition to achieve consistent Masterwork results for your most important gear."
-      },
-      {
-        "section": "Quest Prioritization",
-        "text": "Prioritize Bard's Lost Guitar quest early to unlock the Arcane Pickaxe. This tool accelerates all subsequent mining activities. Complete the Goblin King quest only after accumulating sufficient resources for all five escalating tributes. Save rare gems like Rubies for the final tribute."
-      },
-      {
-        "section": "Resource Management",
-        "text": "Don't waste rare ores on low-tier crafting. Save Mithril, Demonite, and Adamantite for end-game equipment. Use common ores (Iron, Copper, Silver) for practice and basic gear. Always maintain a stockpile of Gold for quest tributes and essential upgrades."
-      },
-      {
-        "section": "Race Selection Strategy",
-        "text": "Choose your race based on your playstyle. For PVP-focused players, Shadow (A-tier) with dodge chance is the meta. For end-game content, Demon (S-tier Mythical) provides unmatched damage. Use race reroll codes from the wiki to maximize your chances of getting your desired race."
-      }
-    ],
-    "tags": ["advanced", "strategy", "mining", "forging", "expert", "optimization"]
-  },
-  {
-    "slug": "item-location-guide",
-    "title": "Complete Item Location Guide - The Forge",
-    "category": "Reference",
+    "slug": "contracts",
+    "title": "Contract Tier List (PvP/PvE)",
+    "description": "Comprehensive ranking of all contracts including Ghost, Snake, and Mantis. Detailed ability breakdown.",
+    "category": "Tier List",
     "difficulty": "All Levels",
-    "author": "Wiki Team",
-    "lastUpdated": "2024-03-18",
-    "description": "Comprehensive guide to finding every important item in The Forge Roblox. Learn where to find quest items, rare ores, and legendary equipment.",
-    "content": [
-      {
-        "section": "Quest Items",
-        "text": "The Unknown Key is obtained by completing Bard's Lost Guitar quest. Find the guitar in a hidden hole near Umut the Brave in Stonewake Mine. The Arcane Pickaxe is located in Fallen Angel's Cave, unlocked with the Unknown Key. Tomo's Lost Cat can be found behind a waterfall wall in the Goblin Cave."
-      },
-      {
-        "section": "Ore Locations by Depth",
-        "text": "Ores in The Forge are found at specific depth ranges. Stone and Coal start at 0-10m. Copper appears at 25m+. Iron at 50m+, Silver at 100m+, Gold at 150m+, Platinum at 250m+. Rare ores like Mithril (400m+), Demonite (600m+), Titanium (800m+), Adamantite (900m+), and Luminite (1000m+) require deeper mining with powerful pickaxes."
-      },
-      {
-        "section": "Forging Locations",
-        "text": "Visit the Anvil to access the manual forging minigame. Here you can craft weapons, tools, and equipment from ore ingots. The forging location is accessible from the main spawn area and is essential for upgrading your gear throughout the game."
-      },
-      {
-        "section": "Race Reroll Location",
-        "text": "Find the Wizard NPC at Stonewake's Cross to reroll your race. This location is easily accessible from spawn and is where you'll spend codes or currency for race rerolls. Remember that Mythical races have only a 0.5% drop rate."
-      },
-      {
-        "section": "Quest NPCs",
-        "text": "The Bard is located at the spawn campfire, offering the Lost Guitar quest. Tomo can be found in the main area, requesting help finding his lost cat. The Goblin King resides in the Forgotten Kingdom, requiring escalating tributes to challenge."
-      }
-    ],
-    "tags": ["items", "locations", "reference", "guide", "ore-locations"]
+    "date": "2026-01-10"
   },
   {
-    "slug": "forging-guide",
-    "title": "Complete Forging Guide - Master the Crafting System",
-    "category": "Forging",
+    "slug": "fiends",
+    "title": "All Fiends & Drop Rates",
+    "description": "Complete list of Fiend forms including the 0.1% Chainsaw Fiend. Learn about passives and skills.",
+    "category": "Database",
+    "difficulty": "All Levels",
+    "date": "2026-01-10"
+  },
+  {
+    "slug": "../blog/how-to-use-surgery-kit",
+    "title": "Surgery Kit & Harvesting Guide",
+    "description": "Step-by-step tutorial on using the Surgery Kit to get hearts and legs for special contracts.",
+    "category": "Gameplay",
     "difficulty": "Intermediate",
-    "author": "Master Smith",
-    "lastUpdated": "2024-03-22",
-    "description": "Learn everything about the manual forging minigame in The Forge. Master the 3-step process to create Normal, Masterwork, and Legendary quality items.",
-    "content": [
-      {
-        "section": "Introduction to Forging",
-        "text": "The Forge features a unique manual forging minigame where you craft weapons and tools yourself. This 3-step process requires timing and skill to achieve higher quality results. The quality levels are: Normal (baseline), Masterwork (superior stats), and Legendary (maximum power)."
-      },
-      {
-        "section": "The 3-Step Forging Process",
-        "text": "Step 1: Heat the metal to the correct temperature. Watch the temperature gauge and stop at the optimal point. Step 2: Strike the metal at the right moment to shape it. Timing is crucial here. Step 3: Quench the weapon at the perfect time to temper it. Master all three steps for Masterwork quality."
-      },
-      {
-        "section": "Materials Needed",
-        "text": "You need ore ingots to forge items. Smelt raw ores using Coal at the furnace to create ingots. Different items require different materials: Iron for basic weapons, Gold for mid-tier, Mithril for Epic gear, and Demonite/Adamantite for Legendary and Mythical equipment."
-      },
-      {
-        "section": "Quality System",
-        "text": "Normal quality items have baseline stats. Masterwork quality significantly increases damage, durability, and effectiveness. Legendary quality (very rare) provides maximum power. Practice with common materials before attempting rare ores to perfect your technique."
-      },
-      {
-        "section": "Essential Crafted Items",
-        "text": "Key items to forge include: Iron Pickaxe for early mining upgrades, Golden Sword for combat, Mithril Blade for Epic-tier power, Demonite Axe for Legendary damage, and the Colossal Sword for the ultimate end-game weapon. Each requires mastering the forging minigame."
-      }
-    ],
-    "tags": ["forging", "crafting", "minigame", "guide", "intermediate"]
+    "date": "2026-01-10"
   },
   {
-    "slug": "quest-walkthrough",
-    "title": "Complete Quest Walkthrough - The Forge",
-    "category": "Walkthrough",
-    "difficulty": "All Levels",
-    "author": "Wiki Team",
-    "lastUpdated": "2024-03-25",
-    "description": "Step-by-step walkthrough for all main and side quests in The Forge Roblox. Never get stuck on a quest again!",
-    "content": [
-      {
-        "section": "Quest Order Recommendation",
-        "text": "Recommended order: Start with Bard's Lost Guitar → Arcane Pickaxe Quest → Mining Master → Forging Apprentice → Lost Cat → Race Reroll → Goblin King (after gathering resources) → The Forge Master (end-game)."
-      },
-      {
-        "section": "Bard's Lost Guitar Quest",
-        "text": "Find the Bard NPC at the spawn campfire. Accept the quest to find his lost guitar. Travel to Stonewake Mine and locate Umut the Brave. Search for a hidden hole in a bush near this NPC. The guitar is inside. Return it to the Bard to receive the Unknown Key."
-      },
-      {
-        "section": "Arcane Pickaxe Quest",
-        "text": "With the Unknown Key from Bard's quest, locate the Fallen Angel's Cave. Use the key to unlock the cave entrance. Inside, you'll find the legendary Arcane Pickaxe, which dramatically increases mining speed and efficiency. This is essential for all future mining activities."
-      },
-      {
-        "section": "Goblin King Quest Strategy",
-        "text": "This quest requires significant resource preparation. Gather Gold, Topaz, and progressively rarer gems for the five escalating tributes. Start with Gold for tribute 1, then add Topaz for tribute 2. Continue escalating until tribute 5 requires Gold + Rubies. Only attempt this quest after accumulating all required materials."
-      },
-      {
-        "section": "Tips for End-Game",
-        "text": "For The Forge Master quest, you need to: Reach maximum mining depth (1000m+), collect all rare ores including Luminite, forge a Masterwork quality weapon, complete all main quests including Goblin King, and craft the Colossal Sword. This is the ultimate challenge requiring mastery of all game systems."
-      }
-    ],
-    "tags": ["quests", "walkthrough", "guide", "tutorial", "step-by-step"]
-  },
-  {
-    "slug": "arcane-pickaxe-guide",
-    "title": "How to Get Arcane Pickaxe - Complete Guide",
-    "category": "Quest",
+    "slug": "../tools/reroll-simulator",
+    "title": "Fiend Reroll Simulator",
+    "description": "Test your luck before spending Robux! Simulate rolling for the rare Chainsaw Fiend.",
+    "category": "Tool",
     "difficulty": "Beginner",
-    "author": "The Forge Wiki Team",
-    "lastUpdated": "2024-12-01",
-    "description": "Complete step-by-step guide to get the Arcane Pickaxe in The Forge Roblox. Learn how to complete Bard's Lost Guitar quest, find the Unknown Key, and unlock Fallen Angel's Cave to obtain this S+ tier mining tool.",
-    "content": [
-      {
-        "section": "Why You Need the Arcane Pickaxe",
-        "text": "The Arcane Pickaxe is the best mining tool in The Forge Roblox. With 100% luck chance and +200% mining speed, it dramatically improves your ability to find rare ores like Mithril, Demonite, and Luminite. This S+ tier pickaxe is essential for efficient resource gathering and progressing through the game. Without it, mining becomes extremely slow and frustrating."
-      },
-      {
-        "section": "Step 1: Complete Bard's Lost Guitar Quest",
-        "text": "First, you need to find the Bard NPC at the spawn campfire area. Accept his quest to find his lost guitar. The guitar is located in Stonewake Mine near an NPC named Umut the Brave. Look for a hidden hole in a bush near this NPC - the guitar is inside. Return it to the Bard to receive the Unknown Key, which is required for the next step."
-      },
-      {
-        "section": "Step 2: Locate Fallen Angel's Cave",
-        "text": "With the Unknown Key in your inventory, you need to find the Fallen Angel's Cave. This cave is located in a specific area of the map. Look for a locked cave entrance that requires a key to open. The exact location may vary, but it's typically in a secluded area away from the main spawn point."
-      },
-      {
-        "section": "Step 3: Unlock the Cave and Claim Your Reward",
-        "text": "Use the Unknown Key to unlock the Fallen Angel's Cave entrance. Once inside, explore the cave to find the legendary Arcane Pickaxe. It's usually located in a prominent position within the cave. Simply interact with it to add it to your inventory. Congratulations - you now have the best mining tool in the game!"
-      },
-      {
-        "section": "Tips and Tricks",
-        "text": "Complete this quest as early as possible - the Arcane Pickaxe will make all subsequent mining activities much faster. The +200% mining speed bonus means you'll gather resources 3x faster than with basic pickaxes. The 100% luck chance also significantly increases your chances of finding rare ores, making it essential for crafting high-tier equipment."
-      },
-      {
-        "section": "What to Do After Getting the Arcane Pickaxe",
-        "text": "With the Arcane Pickaxe, you can now efficiently mine rare ores at deeper depths. Focus on gathering Mithril (400m+), Demonite (600m+), Titanium (800m+), Adamantite (900m+), and Luminite (1000m+) for end-game crafting. Use these materials to forge powerful weapons and complete advanced quests like the Goblin King challenge."
-      }
-    ],
-    "tags": ["arcane-pickaxe", "quest", "mining", "beginner", "guide", "tool"]
-  },
-  {
-    "slug": "lost-cat-quest-guide",
-    "title": "Lost Cat Quest - Complete Walkthrough",
-    "category": "Quest",
-    "difficulty": "Beginner",
-    "author": "The Forge Wiki Team",
-    "lastUpdated": "2024-12-01",
-    "description": "Step-by-step guide to complete Tomo's Lost Cat quest in The Forge Roblox. Find the cat hidden behind a waterfall wall in the Goblin Cave and claim your rewards.",
-    "content": [
-      {
-        "section": "Quest Overview",
-        "text": "Tomo's Lost Cat is a beginner-friendly side quest that rewards you with coins and experience. The cat is hidden in a specific location that can be tricky to find without guidance. This quest is perfect for new players looking to earn some early-game rewards. **Detailed Rewards:** Completing this quest typically rewards 500-1000 coins and 200-500 experience points, making it an excellent early-game source of currency. The quest is repeatable daily, so you can complete it multiple times for consistent rewards."
-      },
-      {
-        "section": "How to Start the Quest",
-        "text": "Find Tomo NPC in the main spawn area. He will tell you that his cat is missing and ask for your help finding it. Accept the quest to begin your search. The quest marker will guide you in the general direction, but the exact location requires some exploration. **Expert Tip:** Tomo is typically located near the spawn campfire or in the main town area. Look for an NPC with a quest indicator above their head. The quest is available immediately after starting the game, making it perfect for new players."
-      },
-      {
-        "section": "Finding the Lost Cat - Detailed Location Guide",
-        "text": "The cat is hidden behind a waterfall wall in the Goblin Cave area. **Step-by-Step Process:** 1) From spawn, travel northeast toward the Goblin Cave entrance (you'll see goblin enemies nearby), 2) Enter the Goblin Cave and navigate through the main tunnel, 3) Look for a waterfall feature on the right side of the cave (it's a cascading water wall, not immediately obvious), 4) Walk directly through the waterfall - there's a hidden passage behind it that many players miss, 5) Inside the hidden chamber, you'll find the Lost Cat sitting on a small ledge, 6) Interact with the cat (press E or click) to complete the quest. **Important Note:** The waterfall is semi-transparent, so you can see through it slightly. If you're having trouble, try jumping through the waterfall from different angles. The hidden passage is about 2-3 player widths wide, so you don't need to be perfectly aligned."
-      },
-      {
-        "section": "Quest Rewards & Benefits",
-        "text": "Completing the Lost Cat quest rewards you with 500-1000 coins and 200-500 experience points. While not as valuable as the Arcane Pickaxe quest, this is still a worthwhile early-game quest that helps you get familiar with the game's exploration mechanics. **Strategic Value:** The coins from this quest are enough to purchase your first basic tools or weapons from NPCs. The experience points help you level up early, unlocking new abilities and quests. Additionally, completing this quest teaches you the importance of exploring hidden areas - a skill that will be crucial for finding rare items and completing advanced quests later in the game."
-      },
-      {
-        "section": "Advanced Tips & Common Mistakes",
-        "text": "**Pro Tips for Success:** 1) Bring a torch or light source - the Goblin Cave can be dark, making it harder to spot the waterfall, 2) Don't rush - take your time exploring the cave walls, the waterfall blends in with the environment, 3) If you see goblin enemies, you're in the right area - the waterfall is usually past the first group of enemies, 4) The cat makes a faint meowing sound - turn up your game audio to help locate it, 5) If you can't find it, try leaving and re-entering the cave - sometimes the cat spawns in slightly different positions. **Common Mistakes to Avoid:** Many players give up too quickly - the waterfall is intentionally hidden to reward exploration. Don't assume the quest marker is pointing to the exact location - it only shows the general area. Also, make sure you've actually accepted the quest from Tomo - you can't find the cat without the quest active."
-      },
-      {
-        "section": "What to Do After Completing the Quest",
-        "text": "After returning the cat to Tomo and claiming your rewards, you should: 1) Use the coins to purchase basic equipment (pickaxe, weapon) if you haven't already, 2) Consider completing the Bard's Lost Guitar quest next - it's the next logical step in the early-game progression, 3) Start mining for basic ores (Coal, Iron) to begin crafting, 4) Explore other areas of the map to discover more quests and hidden items. This quest serves as an excellent introduction to The Forge's exploration-based gameplay, preparing you for more complex quests like the Arcane Pickaxe quest."
-      }
-    ],
-    "tags": ["lost-cat", "quest", "tomo", "beginner", "walkthrough", "guide"]
+    "date": "2026-01-10"
   }
 ]
