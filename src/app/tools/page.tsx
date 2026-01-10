@@ -8,15 +8,19 @@ import { generateMetadata as generateSEOMetadata } from '@/lib/seo'
 import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = generateSEOMetadata({
-  title: 'The Forge Tools - Interactive Calculators & Simulators',
-  description: 'Use our interactive tools for The Forge Roblox: Reroll Simulator, Forging Calculator, and Ore Depth Finder. Plan your gameplay strategy with these free tools.',
+  title: 'The Forge Calculator & Tools - Forge Simulator, Ore Finder, Reroll',
+  description: 'Free online calculators for The Forge Roblox. Use our Forging Calculator to plan crafting, Ore Depth Finder for mining, and Race Reroll Simulator to test your luck before spending Robux.',
   keywords: [
-    'The Forge Tools',
-    'The Forge Reroll Simulator',
-    'The Forge Calculator',
-    'Ore Depth Finder',
-    'Forging Calculator',
-    'Roblox The Forge',
+    'the forge calculator',
+    'forge calculator roblox',
+    'the forge tools',
+    'forge reroll simulator',
+    'the forge ore depth',
+    'forging calculator',
+    'ore depth finder',
+    'roblox the forge wiki',
+    'the forge crafting calculator',
+    'race reroll simulator',
   ],
   canonicalUrl: `${siteConfig.url}/tools`,
   type: 'website',
@@ -140,6 +144,34 @@ export default function ToolsPage() {
           </div>
         </CardContent>
       </Card>
+
+      {/* SEO Content Section */}
+      <div className="mt-12 prose prose-lg max-w-none bg-white dark:bg-gray-800 p-8 rounded-xl border border-gray-200 dark:border-gray-700">
+        <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">About The Forge Calculator Tools</h2>
+
+        <p className="text-gray-700 dark:text-gray-300 mb-4">
+          Our <strong>Forge Calculator</strong> suite provides essential tools for mastering The Forge on Roblox. Whether you&apos;re a new player trying to understand ore depths or an experienced crafter optimizing your forging process, these calculators give you the data you need.
+        </p>
+
+        <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mt-6 mb-3">How the Forging Calculator Works</h3>
+        <p className="text-gray-700 dark:text-gray-300 mb-4">
+          The Forging Calculator uses the exact in-game recipes to calculate material requirements. Enter your target weapon or tool, and it instantly shows you the ore count, ingot requirements, and estimated mining time. This saves hours of trial-and-error crafting.
+        </p>
+
+        <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mt-6 mb-3">Ore Depth Finder Algorithm</h3>
+        <p className="text-gray-700 dark:text-gray-300 mb-4">
+          Our Ore Depth Finder maps all ore spawn ranges from 0m to 1200m+ depth. The algorithm cross-references official spawn tables with community-verified data to show you exactly where each ore spawns, its rarity at each depth level, and optimal farming zones.
+        </p>
+
+        <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mt-6 mb-3">Race Reroll Probability</h3>
+        <p className="text-gray-700 dark:text-gray-300 mb-4">
+          The Reroll Simulator uses the official drop rates: Common races (Human, Goblin) at 30%, Rare races (Dwarf, Elf) at 15%, Epic races at 5%, and Mythical races (Angel, Demon) at 0.5-1%. Simulate thousands of rerolls before spending real Robux to understand your true odds.
+        </p>
+
+        <p className="text-gray-600 dark:text-gray-400 text-sm mt-6">
+          All calculator data is verified against The Forge game mechanics as of January 2026. For detailed guides, check our <a href="/blog" className="text-amber-600 dark:text-amber-400 hover:underline">Blog</a> and <a href="/wiki" className="text-amber-600 dark:text-amber-400 hover:underline">Wiki</a>.
+        </p>
+      </div>
     </div>
   )
 }

@@ -547,5 +547,57 @@
       "effect": "Chance to freeze enemies",
       "source": "Elite Zombie"
     }
+  },
+  {
+    "slug": "stolen-heart",
+    "name": "Stolen Heart",
+    "location": "Goblin Lord Boss Drop",
+    "type": "Crafting Material",
+    "description": "The rarest heart in The Forge Roblox, dropped exclusively by the Goblin Lord boss. This dark, pulsing heart is essential for crafting Legendary-tier weapons. **How to Get:** You must summon the Goblin Lord by offering escalating tributes at the Goblin Shrine in the Forgotten Kingdom. The first tribute requires 5 Gold Ore + 1 Topaz, the second requires 10 Gold Ore + 3 Topaz, and the final tribute requires 15 Gold Ore + 5 Topaz + 1 Ruby. After the third tribute, the Goblin Lord spawns. Defeat him for a ~2% chance to obtain the Stolen Heart.",
+    "stats": {
+      "rarity": "Legendary",
+      "dropRate": "~2%",
+      "source": "Goblin Lord Boss",
+      "use": "Legendary Weapon Crafting"
+    }
+  },
+  {
+    "slug": "prismatic-heart",
+    "name": "Prismatic Heart",
+    "location": "Frostspire Expanse - Quest Reward",
+    "type": "Crafting Material",
+    "description": "A shimmering crystalline heart obtained through the Winter Expansion quest chain. Unlike other hearts, this is a guaranteed reward from 'The Frozen Heart' quest series. **How to Get:** Own the Prismatic Pickaxe, then speak to the Ice Sage NPC near the Frozen Waterfall in Frostspire Expanse. Complete the 3-part quest chain, which includes mining 50 Iceite Ore. Used for crafting the Prismatic Blade and upgrading the Prismatic Pickaxe.",
+    "stats": {
+      "rarity": "Epic",
+      "dropRate": "Quest Reward (100%)",
+      "source": "The Frozen Heart Quest",
+      "use": "Prismatic Gear Crafting"
+    }
+  },
+  {
+    "slug": "yeti-heart",
+    "name": "Yeti Heart",
+    "location": "Yeti Boss - Frostspire Expanse",
+    "type": "Crafting Material",
+    "description": "A frozen heart dropped by the Yeti boss at Blizzard Peak in Frostspire Expanse. This icy blue heart pulses with cold energy and is essential for crafting Ice-elemental weapons. **How to Get:** Travel to Blizzard Peak in the Winter Expansion zone. The Yeti spawns every 15 minutes naturally. Use Fire-enchanted weapons for 2x damage multiplier. The Yeti Heart has approximately a 3% drop rate.",
+    "stats": {
+      "rarity": "Epic",
+      "dropRate": "~3%",
+      "source": "Yeti Boss",
+      "use": "Ice Weapon Crafting"
+    }
+  },
+  {
+    "slug": "golem-heart",
+    "name": "Golem Heart",
+    "location": "Stone Golem / Obsidian Golem",
+    "type": "Crafting Material",
+    "description": "A heavy, stone-encased heart dropped by Golem-type bosses. The most accessible of all rare hearts, it's essential for defense-focused builds. **How to Get:** Stone Golems spawn naturally at Stonewake Mine (Depth 300-500m) every 20 minutes, with a ~5% drop rate. For better odds, hunt the rare Obsidian Golem variant in Volcanic Depths (600m+) which has a ~10% drop rate. Used for crafting Golem Armor and the Stone Shield.",
+    "stats": {
+      "rarity": "Rare",
+      "dropRate": "~5% (Stone) / ~10% (Obsidian)",
+      "source": "Stone Golem / Obsidian Golem",
+      "use": "Defense Gear Crafting"
+    }
   }
 ]
