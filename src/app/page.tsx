@@ -17,11 +17,11 @@ export default function HomePage() {
       {/* Hero Section */}
       <div className="text-center mb-12 py-10 bg-gradient-to-b from-red-50 to-white dark:from-gray-900 dark:to-gray-950 rounded-2xl border border-red-100 dark:border-gray-800">
         <h1 className="text-4xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">
-          Devil Hunter Wiki
+          Devil Hunter Roblox Wiki & Strategy Guide
         </h1>
         <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-xl mx-auto">
           The ultimate resource for <strong>Devil Hunter Roblox</strong>. <br />
-          Find Codes, Contract Tier Lists, Fiend Guides, and more.
+          Find Codes, Contract Tier Lists, Fiend Guides, and the official Trello/Discord links.
         </p>
 
         {/* Search Bar */}
@@ -31,20 +31,20 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Quick Actions */}
+        {/* Quick Actions / Trello Links */}
         <div className="flex flex-wrap justify-center gap-4">
+          <a href={siteConfig.links.game} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-gray-900 text-white px-6 py-3 rounded-xl font-bold hover:bg-gray-700 transition-all shadow-lg hover:shadow-gray-500/30">
+            <Play className="w-5 h-5" /> Play Game
+          </a>
+          <a href={siteConfig.links.discord} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-[#5865F2] text-white px-6 py-3 rounded-xl font-bold hover:bg-[#4752C4] transition-all shadow-lg hover:shadow-blue-500/30">
+            Discord
+          </a>
           <a href="/codes" className="flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-xl font-bold hover:bg-green-700 transition-all shadow-lg hover:shadow-green-500/30">
             <Gift className="w-5 h-5" /> Active Codes
             <span className="bg-white/20 text-xs py-0.5 px-2 rounded ml-1">{activeCodes.length}</span>
           </a>
-          <a href="/wiki/contracts" className="flex items-center gap-2 bg-red-600 text-white px-6 py-3 rounded-xl font-bold hover:bg-red-700 transition-all shadow-lg hover:shadow-red-500/30">
-            <Sword className="w-5 h-5" /> Contract Tier List
-          </a>
-          <a href="/wiki/fiends" className="flex items-center gap-2 bg-orange-600 text-white px-6 py-3 rounded-xl font-bold hover:bg-orange-700 transition-all shadow-lg hover:shadow-orange-500/30">
-            <Skull className="w-5 h-5" /> Fiend Guide
-          </a>
-          <a href="/tools/reroll-simulator" className="flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-500/30">
-            🎲 Reroll Sim
+          <a href="/wiki/tier-list" className="flex items-center gap-2 bg-red-600 text-white px-6 py-3 rounded-xl font-bold hover:bg-red-700 transition-all shadow-lg hover:shadow-red-500/30">
+            <Sword className="w-5 h-5" /> Meta Tier List
           </a>
         </div>
       </div>

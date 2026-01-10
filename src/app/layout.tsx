@@ -7,21 +7,23 @@ import CookieConsent from '@/components/CookieConsent'
 import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
   title: {
     default: siteConfig.name,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
   keywords: [
-    'The Forge Roblox',
-    'The Forge Codes',
-    'The Forge Wiki',
+    'Devil Hunter Roblox',
+    'Devil Hunter Codes',
+    'Devil Hunter Wiki',
     'Roblox RPG',
-    'Race Tier List',
+    'Contract Tier List',
+    'Chainsaw Man Roblox',
   ],
   authors: [
     {
-      name: 'The Forge Wiki',
+      name: 'Devil Hunter Wiki',
     },
   ],
   icons: {
@@ -36,7 +38,7 @@ export const metadata: Metadata = {
       {
         rel: 'mask-icon',
         url: '/safari-pinned-tab.svg',
-        color: '#F59E0B',
+        color: '#DC2626',
       },
     ],
   },
@@ -64,16 +66,19 @@ export const metadata: Metadata = {
     images: [siteConfig.ogImage],
   },
   alternates: {
-    canonical: siteConfig.url,
+    canonical: './',
   },
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
     title: siteConfig.name,
   },
+}
+
+export const viewport = {
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#F59E0B' },
-    { media: '(prefers-color-scheme: dark)', color: '#EA580C' },
+    { media: '(prefers-color-scheme: light)', color: '#DC2626' },
+    { media: '(prefers-color-scheme: dark)', color: '#991B1B' },
   ],
 }
 

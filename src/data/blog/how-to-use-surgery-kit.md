@@ -1,9 +1,12 @@
 title: "How to Use the Surgery Kit in Devil Hunter - Complete Guide"
 description: "Learn exactly how to use the Surgery Kit to harvest body parts from fiends and devils. Step-by-step guide with tips for successful extraction."
 publishedAt: "2026-01-10"
-author: "Wiki Editor"
+author:
+  name: "Wiki Editor"
+  role: "Game Expert"
 category: "Guides"
 featuredImage: "/images/surgery-kit-guide.jpg"
+readingTime: 5
 tags: ["Devil Hunter Surgery Kit", "How to use Surgery Kit", "Devil Hunter body parts", "Devil Hunter harvest guide"]
 ---
 

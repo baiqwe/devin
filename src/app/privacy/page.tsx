@@ -5,9 +5,9 @@ import SEOHead from '@/components/SEOHead'
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = generateSEOMetadata({
-  title: 'Privacy Policy - The Forge Wiki',
-  description: 'Privacy Policy for The Forge Wiki. Learn how we collect, use, and protect your personal information, including our use of cookies and analytics.',
-  keywords: ['Privacy Policy', 'The Forge Wiki', 'Cookie Policy', 'Data Protection'],
+  title: 'Privacy Policy - Devil Hunter Wiki',
+  description: 'Privacy Policy for Devil Hunter Wiki. Learn how we collect, use, and protect your personal information, including our use of cookies and analytics.',
+  keywords: ['Privacy Policy', 'Devil Hunter Wiki', 'Cookie Policy', 'Data Protection'],
   canonicalUrl: '/privacy',
 })
 
@@ -42,7 +42,7 @@ export default function PrivacyPage() {
             Welcome to <strong>{siteConfig.name}</strong> ({siteConfig.url}). We are committed to protecting your privacy and ensuring transparency about how we collect, use, and safeguard your information. This Privacy Policy explains our practices regarding data collection and usage.
           </p>
           <p className="text-gray-700 dark:text-gray-300">
-            This website is operated by experienced players and community members who are passionate about <strong>The Forge</strong> Roblox game. We provide comprehensive guides, codes, and resources to help players enhance their gaming experience.
+            This website is operated by experienced players and community members who are passionate about <strong>Devil Hunter</strong> Roblox game. We provide comprehensive guides, codes, and resources to help players enhance their gaming experience.
           </p>
         </section>
 

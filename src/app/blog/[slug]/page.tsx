@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     }
 
     return {
-        title: `${post.title} - The Forge Wiki`,
+        title: `${post.title} - Devil Hunter Wiki`,
         description: post.description,
         keywords: post.tags,
         authors: [{ name: post.author.name }],

@@ -5,9 +5,9 @@ import SEOHead from '@/components/SEOHead'
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = generateSEOMetadata({
-  title: 'Terms of Service - The Forge Wiki',
-  description: 'Terms of Service for The Forge Wiki. Read our terms and conditions for using our website, guides, and resources.',
-  keywords: ['Terms of Service', 'Terms and Conditions', 'The Forge Wiki', 'User Agreement'],
+  title: 'Terms of Service - Devil Hunter Wiki',
+  description: 'Terms of Service for Devil Hunter Wiki. Read our terms and conditions for using our website, guides, and resources.',
+  keywords: ['Terms of Service', 'Terms and Conditions', 'Devil Hunter Wiki', 'User Agreement'],
   canonicalUrl: '/terms',
 })
 
@@ -49,15 +49,15 @@ export default function TermsPage() {
         <section className="mb-8">
           <h2 className="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-100">2. Description of Service</h2>
           <p className="text-gray-700 dark:text-gray-300 mb-4">
-            <strong>{siteConfig.name}</strong> is a community-driven wiki and resource website dedicated to <strong>The Forge</strong>, a Roblox game developed by Fireatacck. Our service provides:
+            <strong>{siteConfig.name}</strong> is a community-driven wiki and resource website dedicated to <strong>Devil Hunter</strong>, a Roblox game. Our service provides:
           </p>
           <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
             <li>Comprehensive game guides and walkthroughs</li>
             <li>Active and expired game codes</li>
-            <li>Race tier lists and statistics</li>
-            <li>Item locations and descriptions</li>
-            <li>Quest walkthroughs and strategies</li>
-            <li>Interactive tools (e.g., Reroll Simulator)</li>
+            <li>Contract and Fiend tier lists</li>
+            <li>Fiend drop rates and ability details</li>
+            <li>Surgery Kit and harvesting guides</li>
+            <li>Interactive tools (e.g., Fiend Reroll Simulator)</li>
             <li>Community resources and tips</li>
           </ul>
         </section>
@@ -90,7 +90,7 @@ export default function TermsPage() {
 
           <h3 className="text-xl font-semibold mb-3 text-gray-800 dark:text-gray-100">4.2 Game Content</h3>
           <p className="text-gray-700 dark:text-gray-300">
-            <strong>The Forge</strong> is a game developed by Fireatacck and published on Roblox. All game-related content, including but not limited to game mechanics, items, races, and codes, are the intellectual property of Fireatacck and Roblox Corporation. Our website provides information and guides about the game but does not claim ownership of the game content itself.
+            <strong>Devil Hunter</strong> is a game published on Roblox. All game-related content, including but not limited to game mechanics, contracts, fiends, and codes, are the intellectual property of the game developers and Roblox Corporation. Our website provides information and guides about the game but does not claim ownership of the game content itself.
           </p>
         </section>
 

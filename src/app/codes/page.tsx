@@ -20,7 +20,7 @@ const currentYear = date.getFullYear();
 
 // 2. SEO Metadata
 export const metadata: Metadata = generateSEOMetadata({
-  title: `Devil Hunter Codes (${currentMonth} ${currentYear}) - Wiki & Trello`,
+  title: `Devil Hunter Codes (${currentMonth} ${currentYear}) - Free Yen & Rerolls`,
   description: `All active Devil Hunter codes for ${currentMonth} ${currentYear}. Get free Yen, Fiend Rerolls, Clan Rerolls, and Skill Point Resets. Updated daily!`,
   keywords: [
     'Devil Hunter Codes',

@@ -1,0 +1,109 @@
+[
+    {
+        "id": "hayakawa",
+        "name": "Hayakawa",
+        "tier": "S",
+        "buffs": [
+            "+30 Soul",
+            "+10 Posture",
+            "Reduced Contract Requirements"
+        ],
+        "rarity_chance": "Legendary",
+        "description": "One of the best clans for progression due to high Soul and Posture buffs."
+    },
+    {
+        "id": "kishimoto",
+        "name": "Kishimoto",
+        "tier": "S",
+        "buffs": [
+            "+25 Soul",
+            "+10 Posture",
+            "Debuff Resistance",
+            "Improved Resolve/Sanity Scaling"
+        ],
+        "rarity_chance": "Legendary",
+        "description": "Excellent resilience and high stat boosts."
+    },
+    {
+        "id": "kishibe",
+        "name": "Kishibe",
+        "tier": "S",
+        "buffs": [
+            "+10 Health",
+            "+15 Posture",
+            "+20 Stamina",
+            "-20% Debuff Duration",
+            "Increased Damage vs Devils"
+        ],
+        "rarity_chance": "Legendary",
+        "description": "The ultimate combat clan with balanced defensive and offensive buffs."
+    },
+    {
+        "id": "fujimoto",
+        "name": "Fujimoto",
+        "tier": "A",
+        "buffs": [
+            "+10 Health",
+            "+10 Stamina",
+            "+10 Posture",
+            "Reduced Stamina Drain"
+        ],
+        "rarity_chance": "Rare",
+        "description": "A very balanced clan good for any build."
+    },
+    {
+        "id": "higashiyama",
+        "name": "Higashiyama",
+        "tier": "A",
+        "buffs": [
+            "+10 Mobility",
+            "+20 Stamina",
+            "Improved Light Weapon Damage"
+        ],
+        "rarity_chance": "Rare",
+        "description": "Perfect for speed-focused builds using light weapons."
+    },
+    {
+        "id": "himeno",
+        "name": "Himeno",
+        "tier": "A",
+        "buffs": [
+            "Reduced Ghost Devil Contract Costs",
+            "Improved Fear Effects"
+        ],
+        "rarity_chance": "Rare",
+        "description": "Specialized for Ghost Devil users."
+    },
+    {
+        "id": "sawatari",
+        "name": "Sawatari",
+        "tier": "B",
+        "buffs": [
+            "Reduced Snake Devil Penalties",
+            "Lower Ability Costs"
+        ],
+        "rarity_chance": "Uncommon",
+        "description": "Good if you use the Snake Devil."
+    },
+    {
+        "id": "yoshida",
+        "name": "Yoshida",
+        "tier": "B",
+        "buffs": [
+            "Lower Octopus Contract Costs",
+            "Stronger Ink Effects"
+        ],
+        "rarity_chance": "Uncommon",
+        "description": "Specialized for Octopus Devil users."
+    },
+    {
+        "id": "common",
+        "name": "Common Clans",
+        "tier": "C",
+        "buffs": [
+            "None"
+        ],
+        "rarity_chance": "Common (60%)",
+        "description": "Clans like Takahashi, Yamamoto, Tanaka. No special buffs. Reroll immediately."
+    }
+]

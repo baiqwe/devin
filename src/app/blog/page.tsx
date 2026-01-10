@@ -33,8 +33,8 @@ export default function BlogPage() {
 
                 {/* Header */}
                 <div className="text-center mb-16">
-                    <h1 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-amber-600 to-orange-600 dark:from-amber-400 dark:to-orange-400 bg-clip-text text-transparent">
-                        The Forge Blog
+                    <h1 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-red-600 to-orange-600 dark:from-red-400 dark:to-orange-400 bg-clip-text text-transparent">
+                        Devil Hunter Blog
                     </h1>
                     <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
                         Expert guides, in-depth analysis, and proven strategies from experienced players.

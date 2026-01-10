@@ -1,6 +1,6 @@
 export const siteConfig = {
-  name: "Devil Hunter Wiki",
-  description: "The ultimate Devil Hunter Roblox Wiki - Get the latest Codes, Contract Tier Lists, Fiend Guides, Surgery Kit tutorials, and more!",
+  name: "Devil Hunter Wiki (Roblox) - Codes, Trello & Guides 2026",
+  description: "The ultimate Devil Hunter Roblox Wiki. Find the official Trello link, latest Codes, Contract Tier Lists, and guides for Surgery Kits and Fiends.",
   url: "https://devilhunterwiki.com",
   ogImage: "https://devilhunterwiki.com/og.jpg",
   themeColor: "red",
@@ -27,10 +27,30 @@ export const siteConfig = {
   mainNav: [
     { title: "Home", href: "/" },
     { title: "Codes", href: "/codes" },
-    { title: "Contracts", href: "/wiki/contracts" },
-    { title: "Fiends", href: "/wiki/fiends" },
-    { title: "Guides", href: "/wiki" },
-    { title: "Tools", href: "/tools" },
+    {
+      title: 'Contracts',
+      href: '/wiki/contracts',
+    },
+    {
+      title: 'Fiends',
+      href: '/wiki/fiends',
+    },
+    {
+      title: 'Clans',
+      href: '/wiki/clans',
+    },
+    {
+      title: 'Locations',
+      href: '/wiki/locations',
+    },
+    {
+      title: 'Items',
+      href: '/wiki/items',
+    },
+    {
+      title: 'Codes',
+      href: '/codes',
+    },
     { title: "Blog", href: "/blog" },
   ],
 }

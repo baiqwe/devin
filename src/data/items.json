@@ -1,0 +1,38 @@
+[
+    {
+        "id": "surgery-kit",
+        "name": "Surgery Kit",
+        "type": "Tool",
+        "price": "3,500 Yen",
+        "location": "Division 2 HQ / Black Market",
+        "description": "Essential tool used to extract body parts (Hearts, Limbs, Eyes) from defeated enemies. Required for Contracts and Crafting.",
+        "usage": "Equip and use on a downed enemy. Don't move during animation."
+    },
+    {
+        "id": "wipe-potion",
+        "name": "Wipe Potion",
+        "type": "Consumable",
+        "price": "400,000 Yen / 220 Robux",
+        "location": "Black Market (Under Bridge)",
+        "description": "Resets all your stat points, allowing you to re-spec your build.",
+        "usage": "Drink to reset stats."
+    },
+    {
+        "id": "contract-reset",
+        "name": "Contract Reset",
+        "type": "Service",
+        "price": "180 Robux",
+        "location": "Contract Terminator NPC (HQ Floor 0)",
+        "description": "Removes a contract you no longer want.",
+        "usage": "Talk to NPC."
+    },
+    {
+        "id": "fiend-talents",
+        "name": "Fiend Talent Unlock",
+        "type": "Service",
+        "price": "15,000 Yen",
+        "location": "Violence Fiend NPC (Skateboard Shop)",
+        "description": "Enables or disables visual Fiend features/talents.",
+        "usage": "Talk to NPC."
+    }
+]

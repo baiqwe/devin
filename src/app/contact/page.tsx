@@ -117,7 +117,7 @@ export default function ContactPage() {
           </li>
           <li className="flex items-start gap-2">
             <span className="text-amber-600 dark:text-amber-400 font-bold">✓</span>
-            <span>For game-related issues, contact the official <a href="https://www.roblox.com/games/76558904092080/The-Forge-BETA" target="_blank" rel="noopener noreferrer" className="text-amber-600 dark:text-amber-400 hover:underline">The Forge</a> developers</span>
+            <span>For game-related bugs or bans, contact the official <a href={siteConfig.links.discord} target="_blank" rel="noopener noreferrer" className="text-amber-600 dark:text-amber-400 hover:underline">Devil Hunter</a> Discord support. We are a fan wiki, not the developers.</span>
           </li>
         </ul>
       </div>
