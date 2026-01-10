@@ -91,24 +91,16 @@ export default function RootLayout({
     <html lang="en">
       <body className="font-sans antialiased">
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-TDKJYTNZYH"
+          src="https://www.googletagmanager.com/gtag/js?id=G-QEC33NYL6J"
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
-            
-            // 1. Set default consent state (denied, waiting for user input)
-            gtag('consent', 'default', {
-              'ad_storage': 'denied',
-              'analytics_storage': 'denied',
-              'ad_user_data': 'denied',
-              'ad_personalization': 'denied'
-            });
-
             gtag('js', new Date());
-            gtag('config', 'G-TDKJYTNZYH');
+
+            gtag('config', 'G-QEC33NYL6J');
           `}
         </Script>
 
