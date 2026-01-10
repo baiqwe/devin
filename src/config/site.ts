@@ -47,10 +47,7 @@ export const siteConfig = {
       title: 'Items',
       href: '/wiki/items',
     },
-    {
-      title: 'Codes',
-      href: '/codes',
-    },
+
     { title: "Blog", href: "/blog" },
   ],
 }
