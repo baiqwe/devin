@@ -3,7 +3,7 @@ import Script from 'next/script'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-import CookieConsent from '@/components/CookieConsent'
+
 import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = {
@@ -110,7 +110,7 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
-          <CookieConsent />
+
         </div>
       </body>
     </html>
