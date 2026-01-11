@@ -3,7 +3,7 @@ import Script from 'next/script'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-
+import JsonLd from '@/components/JsonLd'
 import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = {
@@ -89,6 +89,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <JsonLd />
+      </head>
       <body className="font-sans antialiased">
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-QEC33NYL6J"

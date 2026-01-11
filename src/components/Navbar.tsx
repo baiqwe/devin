@@ -20,8 +20,8 @@ export default function Navbar() {
     <nav className="border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm sticky top-0 z-40">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="flex h-16 items-center justify-between gap-4">
-          <a href="/" className="text-xl font-bold text-amber-600 dark:text-amber-400 hover:text-amber-700 dark:hover:text-amber-500 flex-shrink-0">
-            {siteConfig.name}
+          <a href="/" className="text-xl font-bold text-red-600 dark:text-red-400 hover:text-red-700 dark:hover:text-red-500 flex-shrink-0">
+            Devil Hunter Wiki
           </a>
           <div className="flex-1 max-w-md hidden md:block">
             <SearchBar />
@@ -66,7 +66,7 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-        
+
         {/* Mobile menu dropdown */}
         {isMenuOpen && (
           <div className="lg:hidden border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
@@ -75,7 +75,7 @@ export default function Navbar() {
               <div className="md:hidden mb-4">
                 <SearchBar />
               </div>
-              
+
               {/* Navigation Links */}
               {siteConfig.mainNav.map((item) => (
                 <a
@@ -89,7 +89,7 @@ export default function Navbar() {
                   {item.title}
                 </a>
               ))}
-              
+
               {/* Play Now Button for Mobile */}
               <a
                 href={siteConfig.links.game}
