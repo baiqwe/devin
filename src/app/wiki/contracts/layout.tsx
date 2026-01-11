@@ -7,29 +7,24 @@ const currentMonth = date.toLocaleString('default', { month: 'long' })
 const currentYear = date.getFullYear()
 
 export const metadata: Metadata = generateSEOMetadata({
-  title: `The Forge Roblox Ores & Price List (${currentMonth} ${currentYear})`,
-  description: `Complete The Forge Roblox ores database with sell prices, rarity, and depth locations. Find the best ores to mine including Mythical Adamantite and Godly Luminite.`,
+  title: `Devil Hunter Contracts & Tier List (${currentMonth} ${currentYear})`,
+  description: `Complete Devil Hunter Roblox contracts database with tier rankings, abilities, and how to obtain them. Find the best contracts for PvP and PvE including Ghost Devil and Snake Devil.`,
   keywords: [
-    'The Forge Ores',
-    'The Forge Mining',
-    'The Forge Ore Prices',
-    'The Forge Roblox Ores',
-    'The Forge Ore Locations',
-    'The Forge Wiki',
+    'Devil Hunter Contracts',
+    'Devil Hunter Tier List',
+    'Devil Hunter Contract Guide',
+    'Devil Hunter Roblox Contracts',
+    'Devil Hunter Ghost Devil',
+    'Devil Hunter Wiki',
   ],
-  canonicalUrl: `${siteConfig.url}/wiki/ores`,
+  canonicalUrl: `${siteConfig.url}/wiki/contracts`,
   type: 'article',
 })
 
-export default function OresLayout({
+export default function ContractsLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return <>{children}</>
 }
-
-
-
-
-

@@ -125,7 +125,7 @@ export default function PrivacyPage() {
           </p>
           <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
             <li><strong>Cookie Preferences:</strong> You can control cookies through your browser settings. Note that disabling cookies may affect website functionality.</li>
-            <li><strong>Data Access:</strong> Request access to your personal data by contacting us at <a href="mailto:developwebtheforge@2925.com" className="text-blue-600 dark:text-blue-400 hover:underline">developwebtheforge@2925.com</a></li>
+            <li><strong>Data Access:</strong> Request access to your personal data by contacting us at <a href="mailto:contact@devilhunterhub.com" className="text-blue-600 dark:text-blue-400 hover:underline">contact@devilhunterhub.com</a></li>
             <li><strong>Data Deletion:</strong> Request deletion of your personal data (subject to legal requirements)</li>
           </ul>
         </section>
@@ -158,7 +158,7 @@ export default function PrivacyPage() {
           </p>
           <div className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
             <p className="text-gray-700 dark:text-gray-300">
-              <strong>Email:</strong> <a href="mailto:developwebtheforge@2925.com" className="text-blue-600 dark:text-blue-400 hover:underline">developwebtheforge@2925.com</a>
+              <strong>Email:</strong> <a href="mailto:contact@devilhunterhub.com" className="text-blue-600 dark:text-blue-400 hover:underline">contact@devilhunterhub.com</a>
             </p>
             <p className="text-gray-700 dark:text-gray-300 mt-2">
               <strong>Website:</strong> <a href={siteConfig.url} className="text-blue-600 dark:text-blue-400 hover:underline">{siteConfig.url}</a>

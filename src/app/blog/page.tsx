@@ -6,9 +6,9 @@ import SEOHead from '@/components/SEOHead'
 import { Clock, Calendar, Tag, User } from 'lucide-react'
 
 export const metadata: Metadata = {
-    title: 'Blog - The Forge Wiki',
-    description: 'Expert guides, strategies, and insights for The Forge. Learn from experienced players and improve your gameplay.',
-    keywords: ['The Forge blog', 'game guides', 'strategies', 'tips', 'tutorials'],
+    title: 'Blog - Devil Hunter Wiki',
+    description: 'Expert guides, strategies, and insights for Devil Hunter. Learn from experienced players and improve your gameplay.',
+    keywords: ['Devil Hunter blog', 'game guides', 'strategies', 'tips', 'tutorials'],
 }
 
 export default function BlogPage() {

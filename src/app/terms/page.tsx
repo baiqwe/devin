@@ -176,7 +176,7 @@ export default function TermsPage() {
           </p>
           <div className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
             <p className="text-gray-700 dark:text-gray-300">
-              <strong>Email:</strong> <a href="mailto:developwebtheforge@2925.com" className="text-blue-600 dark:text-blue-400 hover:underline">developwebtheforge@2925.com</a>
+              <strong>Email:</strong> <a href="mailto:contact@devilhunterhub.com" className="text-blue-600 dark:text-blue-400 hover:underline">contact@devilhunterhub.com</a>
             </p>
             <p className="text-gray-700 dark:text-gray-300 mt-2">
               <strong>Website:</strong> <a href={siteConfig.url} className="text-blue-600 dark:text-blue-400 hover:underline">{siteConfig.url}</a>

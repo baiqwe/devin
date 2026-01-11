@@ -6,9 +6,9 @@ import { generateMetadata as generateSEOMetadata } from '@/lib/seo'
 import { Mail, MessageSquare, Clock } from 'lucide-react'
 
 export const metadata: Metadata = generateSEOMetadata({
-  title: 'Contact Us - The Forge Wiki',
-  description: 'Contact The Forge Wiki team. Get in touch for questions, feedback, code submissions, or partnership inquiries.',
-  keywords: ['Contact', 'The Forge Wiki', 'Support', 'Feedback'],
+  title: 'Contact Us - Devil Hunter Wiki',
+  description: 'Contact Devil Hunter Wiki team. Get in touch for questions, feedback, code submissions, or partnership inquiries.',
+  keywords: ['Contact', 'Devil Hunter Wiki', 'Support', 'Feedback'],
   canonicalUrl: '/contact',
 })
 
@@ -41,8 +41,8 @@ export default function ContactPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
         <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6 shadow-md">
           <div className="flex items-center gap-3 mb-4">
-            <div className="p-3 bg-amber-100 dark:bg-amber-900/30 rounded-lg">
-              <Mail className="h-6 w-6 text-amber-600 dark:text-amber-400" />
+            <div className="p-3 bg-red-100 dark:bg-red-900/30 rounded-lg">
+              <Mail className="h-6 w-6 text-red-600 dark:text-red-400" />
             </div>
             <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100">Email Us</h2>
           </div>
@@ -50,10 +50,10 @@ export default function ContactPage() {
             For general inquiries, code submissions, feedback, or partnership opportunities, please email us at:
           </p>
           <a
-            href="mailto:developwebtheforge@2925.com"
-            className="inline-block bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+            href="mailto:contact@devilhunterhub.com"
+            className="inline-block bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
           >
-            developwebtheforge@2925.com
+            contact@devilhunterhub.com
           </a>
         </div>
 
@@ -74,7 +74,7 @@ export default function ContactPage() {
         </div>
       </div>
 
-      <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-8 mb-8">
+      <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-8 mb-8">
         <h2 className="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-100">What Can We Help With?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
@@ -108,20 +108,19 @@ export default function ContactPage() {
         <h2 className="text-xl font-bold mb-4 text-gray-800 dark:text-gray-100">Before You Contact Us</h2>
         <ul className="space-y-2 text-gray-700 dark:text-gray-300">
           <li className="flex items-start gap-2">
-            <span className="text-amber-600 dark:text-amber-400 font-bold">✓</span>
-            <span>Check our <a href="/codes" className="text-amber-600 dark:text-amber-400 hover:underline">Codes page</a> to see if your code is already listed</span>
+            <span className="text-red-600 dark:text-red-400 font-bold">✓</span>
+            <span>Check our <a href="/codes" className="text-red-600 dark:text-red-400 hover:underline">Codes page</a> to see if your code is already listed</span>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-amber-600 dark:text-amber-400 font-bold">✓</span>
-            <span>Review our <a href="/wiki" className="text-amber-600 dark:text-amber-400 hover:underline">Wiki guides</a> - your question might already be answered</span>
+            <span className="text-red-600 dark:text-red-400 font-bold">✓</span>
+            <span>Review our <a href="/wiki" className="text-red-600 dark:text-red-400 hover:underline">Wiki guides</a> - your question might already be answered</span>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-amber-600 dark:text-amber-400 font-bold">✓</span>
-            <span>For game-related bugs or bans, contact the official <a href={siteConfig.links.discord} target="_blank" rel="noopener noreferrer" className="text-amber-600 dark:text-amber-400 hover:underline">Devil Hunter</a> Discord support. We are a fan wiki, not the developers.</span>
+            <span className="text-red-600 dark:text-red-400 font-bold">✓</span>
+            <span>For game-related bugs or bans, contact the official <a href={siteConfig.links.discord} target="_blank" rel="noopener noreferrer" className="text-red-600 dark:text-red-400 hover:underline">Devil Hunter</a> Discord support. We are a fan wiki, not the developers.</span>
           </li>
         </ul>
       </div>
     </div>
   )
 }
-

@@ -1,9 +1,8 @@
-// i18n Configuration for The Forge Wiki
-// Targeting Southeast Asian markets based on traffic data
+// i18n Configuration for Devil Hunter Wiki
 
 export const i18n = {
   defaultLocale: 'en',
-  locales: ['en', 'id', 'th', 'vi', 'zh', 'ms'],
+  locales: ['en', 'zh'],
 } as const
 
 export type Locale = (typeof i18n)['locales'][number]
@@ -16,39 +15,11 @@ export const languages = {
     flag: '🇬🇧',
     dir: 'ltr',
   },
-  id: {
-    code: 'id',
-    name: 'Indonesian',
-    nativeName: 'Bahasa Indonesia',
-    flag: '🇮🇩',
-    dir: 'ltr',
-  },
-  th: {
-    code: 'th',
-    name: 'Thai',
-    nativeName: 'ภาษาไทย',
-    flag: '🇹🇭',
-    dir: 'ltr',
-  },
-  vi: {
-    code: 'vi',
-    name: 'Vietnamese',
-    nativeName: 'Tiếng Việt',
-    flag: '🇻🇳',
-    dir: 'ltr',
-  },
   zh: {
     code: 'zh',
     name: 'Chinese',
     nativeName: '简体中文',
     flag: '🇨🇳',
-    dir: 'ltr',
-  },
-  ms: {
-    code: 'ms',
-    name: 'Malay',
-    nativeName: 'Bahasa Melayu',
-    flag: '🇲🇾',
     dir: 'ltr',
   },
 } as const

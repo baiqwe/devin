@@ -2,12 +2,12 @@ import { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Tools",
-  description: "Interactive tools for The Forge Roblox - Race reroll simulator and more",
+  description: "Interactive tools for Devil Hunter Roblox - Fiend reroll simulator and more",
   keywords: [
-    "The Forge Tools",
-    "The Forge Reroll Simulator",
-    "Roblox The Forge",
-    "The Forge Wiki",
+    "Devil Hunter Tools",
+    "Devil Hunter Reroll Simulator",
+    "Roblox Devil Hunter",
+    "Devil Hunter Wiki",
   ],
 }
 
@@ -18,8 +18,3 @@ export default function ToolsLayout({
 }) {
   return <>{children}</>
 }
-
-
-
-
-
