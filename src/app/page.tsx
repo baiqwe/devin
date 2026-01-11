@@ -178,15 +178,15 @@ export default function HomePage() {
           <div>
             <h3 className="text-lg font-semibold mb-3 text-gray-800 dark:text-gray-100">Devil Hunter Beginner Guide</h3>
             <YouTubeVideo
-              videoId="dQw4w9WgXcQ" // Replace with actual Devil Hunter video ID if available
-              title="Devil Hunter Beginner Guide - How to Start"
+              videoId="gnat7SB3-3g"
+              title="The COMPLETE Devil Hunter Starter Guide"
             />
           </div>
           <div>
-            <h3 className="text-lg font-semibold mb-3 text-gray-800 dark:text-gray-100">Chainsaw Fiend Showcase</h3>
+            <h3 className="text-lg font-semibold mb-3 text-gray-800 dark:text-gray-100">Fiend Showcase</h3>
             <YouTubeVideo
-              videoId="dQw4w9WgXcQ" // Replace with actual Devil Hunter video ID if available
-              title="Chainsaw Fiend Showcase - All Skills"
+              videoId="Zpu5X1ivEoY"
+              title="Fiend is WAY TOO BROKEN in DEVIL HUNTER"
             />
           </div>
         </div>
