@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: "Devil Hunter Wiki (Roblox) - Codes, Trello & Guides 2026",
   description: "The ultimate Devil Hunter Roblox Wiki. Find the official Trello link, latest Codes, Contract Tier Lists, and guides for Surgery Kits and Fiends.",
-  url: "https://devilhunterwiki.com",
-  ogImage: "https://devilhunterwiki.com/og.jpg",
+  url: "https://devilhunterhub.com",
+  ogImage: "https://devilhunterhub.com/og.jpg",
   themeColor: "red",
   keywords: [
     "Devil Hunter Codes",
