@@ -7,8 +7,7 @@ import SEOHead from '@/components/SEOHead'
 import { Clock, Calendar, User, ArrowLeft, Tag } from 'lucide-react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
-import AdsterraBanner728x90 from '@/components/ads/AdsterraBanner728x90'
-import AdsterraNative from '@/components/ads/AdsterraNative'
+
 
 interface BlogPostPageProps {
     params: {
@@ -152,11 +151,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                     )}
                 </header>
 
-                {/* Adsterra 728x90 Banner Ad - After Article Header */}
-                <div className="mb-8 hidden md:block">
-                    <div className="text-center text-xs text-gray-500 dark:text-gray-400 mb-2">Advertisement</div>
-                    <AdsterraBanner728x90 />
-                </div>
+
 
                 {/* Article Content */}
                 <div className="prose prose-lg dark:prose-invert max-w-none
@@ -181,10 +176,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                     <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
                 </div>
 
-                {/* Adsterra Native Banner Ad */}
-                <div className="mt-12">
-                    <AdsterraNative />
-                </div>
+
 
                 {/* Footer CTA */}
                 <div className="mt-16 pt-8 border-t border-gray-200 dark:border-gray-700">

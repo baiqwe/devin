@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Sword, Skull, Gift, Play, ScrollText } from 'lucide-react'
 import YouTubeVideo from '@/components/YouTubeVideo'
-import AdsterraNative from '@/components/ads/AdsterraNative'
+
 
 export default function HomePage() {
   const activeCodes = codesData.filter((c) => c.status === 'Active')
@@ -134,10 +134,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Adsterra Native Banner Ad */}
-      <div className="mb-16">
-        <AdsterraNative />
-      </div>
+
 
       {/* Featured Guides Grid */}
       <div className="mb-16">

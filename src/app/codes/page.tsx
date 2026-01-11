@@ -10,8 +10,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 import { ArrowRight, Skull, Sword } from 'lucide-react'
 import CopyButton from '@/components/CopyButton'
 import LastUpdated from '@/components/LastUpdated'
-import AdsterraBanner300x250 from '@/components/ads/AdsterraBanner300x250'
-import AdsterraNative from '@/components/ads/AdsterraNative'
+
 
 // 1. Dynamic Date Logic for SEO Titles (Static for build)
 const date = new Date();
@@ -165,15 +164,7 @@ export default function CodesPage() {
         </div>
       </div>
 
-      {/* Adsterra Ad - Desktop: 300x250, Mobile: Native Banner */}
-      <div className="mb-16">
-        <div className="hidden md:block">
-          <AdsterraBanner300x250 />
-        </div>
-        <div className="block md:hidden">
-          <AdsterraNative />
-        </div>
-      </div>
+
 
       {/* How to Redeem Codes Section */}
       <div className="prose prose-lg dark:prose-invert max-w-none bg-gray-50 dark:bg-gray-800 p-8 rounded-xl border border-gray-200 dark:border-gray-700 mb-12">
