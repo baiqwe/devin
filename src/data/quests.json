@@ -1,0 +1,11 @@
+[
+    {
+        "id": "test-of-the-strongest",
+        "name": "Test of the Strongest",
+        "giver": "Sensei (Dojo)",
+        "requirements": "Level 50+",
+        "rewards": "Skill: Flash Step",
+        "description": "A difficult combat trial where you must defeat 3 waves of enemies without dying.",
+        "guide": "1. Equip a contract with AoE (like Bomb or Dragon).\n2. Bring at least 5 Health Potions.\n3. Keep moving in circles to avoid getting cornered."
+    }
+]

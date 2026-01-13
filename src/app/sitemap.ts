@@ -6,6 +6,7 @@ import { getAllBlogPosts } from '@/lib/blog'
 import contractsData from '@/data/contracts.json'
 import fiendsData from '@/data/fiends.json'
 import itemsData from '@/data/items.json'
+import questsData from '@/data/quests.json'
 
 // Helper to create URL-friendly slugs from names
 function toSlug(name: string): string {
@@ -39,6 +40,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/wiki/fiends`,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/wiki/trello`,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/wiki/quests`,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
@@ -133,6 +144,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }))
+
+  // Dynamic Wiki Detail Pages - Quests (though currently only a list page exists, if we add detail pages later, we can uncomment this)
+  /*
+  const questPages: MetadataRoute.Sitemap = questsData.map((quest: { id: string }) => ({
+    url: `${baseUrl}/wiki/quests/${quest.id}`,
+    lastModified: baseBuildDate,
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+  */
+
+  return [...staticPages, ...blogPages, ...contractPages, ...fiendPages, ...itemPages]
 
   return [...staticPages, ...blogPages, ...contractPages, ...fiendPages, ...itemPages]
 }

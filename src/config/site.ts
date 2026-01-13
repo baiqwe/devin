@@ -27,6 +27,8 @@ export const siteConfig = {
   mainNav: [
     { title: "Home", href: "/" },
     { title: "Codes", href: "/codes" },
+    { title: "Trello & Links", href: "/wiki/trello" },
+    { title: "Quests", href: "/wiki/quests" },
     {
       title: 'Contracts',
       href: '/wiki/contracts',
