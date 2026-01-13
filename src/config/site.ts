@@ -13,7 +13,14 @@ export const siteConfig = {
     "Devil Hunter Fiends",
     "Devil Hunter Surgery Kit",
     "How to use Surgery Kit Devil Hunter",
-    "Devil Hunter Guide"
+    "Devil Hunter Guide",
+    // Growth Hacking: Typos & International
+    "Evil Hunter Roblox Codes",
+    "Evil Hunter Codes",
+    "Roblox Evil Hunter",
+    "Codigos Devil Hunter",
+    "Devil Hunter Codes Español",
+    "데빌 헌터 코드"
   ],
   links: {
     twitter: "https://x.com/DevilHunter_RB",

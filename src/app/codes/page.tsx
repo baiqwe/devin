@@ -228,6 +228,25 @@ export default function CodesPage() {
           </div>
         </div>
       )}
+
+      {/* International SEO Section - Hidden from main view but visible to bots/searchers */}
+      <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
+        <h3 className="text-xl font-bold mb-4 text-gray-800 dark:text-gray-100">International Guides</h3>
+
+        <div className="prose dark:prose-invert max-w-none">
+          <h4>🇪🇸 Códigos de Devil Hunter (Enero 2026)</h4>
+          <p>
+            Si estás buscando los últimos <strong>códigos para Devil Hunter</strong> en Roblox, has llegado al lugar correcto.
+            Nuestra lista se actualiza diariamente con códigos activos para Yen gratis y Rerolls.
+            Usa la tabla de arriba para canjear tus recompensas (&quot;Rewards&quot;).
+          </p>
+
+          <h4>🇰🇷 데빌 헌터 코드 (2026년 1월)</h4>
+          <p>
+            Roblox 데빌 헌터의 최신 코드를 찾고 계신가요? 무료 Yen과 Reroll을 위한 활성 코드를 확인하세요.
+          </p>
+        </div>
+      </div>
     </div>
   )
 }

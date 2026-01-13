@@ -1,5 +1,26 @@
 [
     {
+        "name": "Eraser Devil",
+        "tier": "S",
+        "rarity": "Legendary",
+        "dropRate": "0.3%",
+        "description": "Currently one of the most sought-after contracts due to its high PVP potential. The 'Erase' ability can bypass blocks.",
+        "abilities": [
+            "Erase Reality",
+            "Void Step",
+            "Existence Wipe",
+            "Dimensional Slash"
+        ],
+        "stats": {
+            "Damage": "S",
+            "Speed": "S",
+            "Combo": "A"
+        },
+        "obtainable": "Legendary Reroll / Void Quest",
+        "color": "text-purple-500",
+        "special": "Can bypass blocks with Erase ability. Best paired with Royal Clan."
+    },
+    {
         "name": "Ghost Devil",
         "tier": "S",
         "rarity": "Legendary",
